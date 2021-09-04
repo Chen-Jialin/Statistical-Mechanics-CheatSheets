@@ -1,0 +1,245 @@
+% !TEX program = pdflatex
+% Thermodynamics&StatisticalMechanicsCheatSheetforMid
+\documentclass[10pt,a4paper]{article}
+\usepackage{geometry}
+\geometry{left=.1cm,right=.1cm,top=.1cm,bottom=.1cm}
+\usepackage{multicol}
+\setlength{\columnseprule}{1pt} 
+%\def\columnseprulecolor{\color{black}}
+\usepackage[UTF8,linespread=.1]{ctex}
+\usepackage{amsmath,amssymb,mathrsfs,bm,graphicx}
+\usepackage{tipa}
+\begin{document}
+\tiny
+\begin{multicols}{2}
+\noindent\textbf{Chap1 热力学的基本规律}
+\textbf{1.1 热力学系统的平衡状态及其描述}\\
+\textbf{热力学系统}:大量微观粒子(分子等)组成的宏观物质系统\quad
+\textbf{外界}:与系统发生相互作用(做功,热传递,粒子交换)的其他物体\\
+\textbf{系统按与外界相互作用情况分类}\quad
+\textbf{孤立系}:系统与外界无能量和物质交换\quad
+\textbf{闭系}:有能交无物交\quad
+\textbf{开系}:有能交和物交\\
+\textbf{平衡态}:一孤立系统,足够长时间后,各宏观量保持恒定的状态\quad
+\textbf{力学平衡}:系统内各部分受力平衡\quad
+\textbf{热平衡}:无定向热流\quad
+\textbf{相平衡}:各物质的量保持恒定
+\textbf{化学平衡}:各化学组分的量保持恒定\\
+\textbf{平衡态的特性}\quad
+\textbf{弛豫时间}:由过程决定\quad
+\textbf{动态平衡}:统计平均下的平衡,大量微观粒子仍不停运动\quad
+\textbf{涨落}:平衡态下宏观量的微小偏差\\
+\textbf{状态参量}\quad
+\textbf{几何参量}:长度/面积/体积/应变张量等\quad
+\textbf{力学参量}:压强/引力张量等\quad
+\textbf{化学参量}:各组分物质的量/质量/浓度等\quad
+\textbf{电磁参量}:电场强度/电极化强度/磁场强度/磁化强度等\\
+\textbf{广延量}:与系统的量成正比的量,体积/内能等\quad
+\textbf{强度量}:与系统的量无关的量,压强/温度等\quad
+\textbf{宏观参量}(状态函数):状态参量的函数\\
+\textbf{系统根据均匀性分类}\quad
+\textbf{单相系}:系统各部分性质完全相同,由单个均匀部分组成\quad
+\textbf{复相系}:系统不均匀，但可以分成若干个均匀部分\\
+\textbf{复相系的平衡态}:满足平衡态条件,各相均可用四类参量表示,各相参量不完全独立\\
+\textbf{1.2 热力平衡定律和温度}
+%\textbf{绝热壁} 刚性器壁,无物质交换和力的相互作用,两边状态可完全独立地改变,互不影响\quad
+%\textbf{透热壁} 非绝热,两边状态改变相互影响\\
+%\textbf{热接触} 通过透热壁的接触\\
+\textbf{热平衡定律(热力学第$0$定律)}:如果物体$A$和物体$B$各自与处在同一状态的物体$C$达到热平衡,若令$A$与$B$进行热接触,它们也将处在热平衡\\
+\textbf{温度的定义}:热平衡定律意味处于热平衡的物体有一共同的状态函数;证明:$A(p_A,V_A)$与$C(p_C,V_C)$达到热平衡:$f_{AC}(p_A,V_A;p_C,V_C)=0\Rightarrow p_C=F_{AC}(p_A,V_A;V_C)$;$B(p_B,V_B)$与$C(p_C,V_C)$达到热平衡:$f_{BC}(p_B,V_B;p_C,V_C)=0\Rightarrow p_C=F_{BC}(p_B,V_B;V_C)\Rightarrow F_{AC}(p_A,V_A;V_C)=F_{BC}(p_B,V_B;V_C)$,$A$与$B$达到热平衡:$f_{AB}(p_A,V_A;p_B,V_B)=0\Rightarrow g(p_A,V_A)=g_B(p_B,V_B)$,从而定义\textbf{温度}$T=g(p,V)$,描述两个或多个相互间处于热平衡的热力学系统所共有的态函数\\
+\textbf{温标}:温度的数值表示;
+\textbf{经验温标}:用测温物质某一随温度单调变化的性质标度的温度;
+\textbf{经验温标三要素}:测温质,固定点,测温质性质与温度关系
+[如\textbf{定容气体温标}:用定容气体压强随冷热变化标度温度,定义纯水三相点温度$273.16$K,气压$p_t$,则$T_V=273.16p/p_t$(K);
+\textbf{理想气体温标}:各种气体定容温标在压强趋于零时的极限,$T=273.16\text{K}\lim_{p_t\rightarrow0}T_V$(摄氏温度$t(\text{C}^{\circ})=T(\text{K})-273.15$)]
+\textbf{热力学(开尔文)温标}:不依赖测温质的标准温标(理想气体温标可用范围内,两种温标一致)\\
+\textbf{1.3 物态方程}:给出温度和状态参量关系的方程,对简单系统,$f(p,V,T)=0$,一般系统,$f(x_1,x_2,\cdots,x_n,T)=0$\\
+\textbf{物态方程相关的物理量}:\textbf{定压膨胀系数}:$\alpha=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p$(可正可负);\textbf{定容压力系数}:$\beta=\frac{1}{p}\left(\frac{\partial p}{\partial T}\right)_V$;\textbf{等温压缩系数}:$\kappa_T=-\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_T>0$;\textbf{以上三者关系}:$\alpha=\kappa_T\beta p$\\
+\textbf{常用微分关系}:\textbf{循环关系} $\left(\frac{\partial y}{\partial x}\right)_z\left(\frac{\partial x}{\partial z}\right)_y\left(\frac{\partial z}{\partial y}\right)_x=-1$;\textbf{互锁关系}:$\left(\frac{\partial y}{\partial x}\right)_z\left(\frac{\partial x}{\partial y}\right)_z=1$;\textbf{链条关系}:$\left(\frac{\partial y}{\partial x}\right)_z=\left(\frac{\partial y}{\partial w}\right)_z\left(\frac{\partial w}{\partial x}\right)_z$;\textbf{角标变换}:$\left(\frac{\partial y}{\partial x}\right)_z=\left(\frac{\partial y}{\partial x}\right)_w+\left(\frac{\partial y}{\partial w}\right)_x\left(\frac{\partial w}{\partial x}\right)_z$\\
+\textbf{玻意耳定律}:一定量的气体,在一定温度下,其压强$p$与体积$V$之积为常量,$pV=C$(对实际气体仅近似成立,气体越稀薄符合越好)\\
+\textbf{阿伏伽德罗定律}:相同温度和压强下$1$mol任何气体的体积都相同,$V_{m0}=22.414L/\text{mol}(p_0=1\text{atm},T_0=273.15\text{K})$\\
+\textbf{理想气体物态方程}:$pV=nRT$(摩尔气体常量$R={p_0V_{m0}}/{T_0}=8.3145\text{J}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$)\\
+\textbf{非理想气体状态方程}:\textbf{范德瓦尔斯方程}:$(p+\frac{an^2}{V^2})(V-nb)=nRT$,其中$a,b$由实验确定\\
+\indent\textbf{昂尼斯方程}:$p=\frac{nRT}{V}\left[1+\frac{n}{V}B(T)+\left(\frac{n}{V}\right)^2C(T)+\cdots\right]$,其中$B(T),C(T),\cdots$为第二/三$\cdots$位力系数,$B(T)$关于$T$递增\\
+\textbf{简单固体和液体状态方程}:$V(T,p)\approx V(T_0,0)+\left.\left(\frac{\partial V}{\partial T}\right)_p\right|_{T=T_0,p=0}(T-T_0)+\left.\left(\frac{\partial V}{\partial p}\right)_T\right|_{T=T_0,p=0}p=V(T_0,0)[1+\alpha(T-T_0)-\kappa_Tp]$\\
+\textbf{磁性固体物态方程}:$f(M,H,T)=0$($M$--磁化强度,$H$--磁场强度);\textbf{顺磁性固体物态方程(居里定律)}:$M=\frac{C}{T}H$\\
+\textbf{1.4 功}
+\textbf{热力学过程}:系统从一平衡态向另一平衡态过渡的过程;
+\textbf{准静态过程}:过程无限缓慢,以致每个中间态均可视为平衡态;
+\textbf{弛豫时间}:系统重新恢复平衡所需的时间(若过程历时$\gg$弛豫时间,则可视为准静态过程)\\
+\textbf{体积功}:$dW=Fdl=pSdl=-pdV$或$W=-\int_{V_1}^{V_2}pdV$($=pV$曲线下的面积)\\
+\textbf{液体表面薄膜}:$\text{\textcrd}W=Fdx=2\sigma ldx=\sigma dA$\\
+\textbf{电介质}:$\text{\textcrd}W=Udq=ElAd\rho=VEd\rho=VEdD=Vd({\varepsilon_0E^2}/{2})+VEdP$\\
+\textbf{磁介质}:$\text{\textcrd}W=UIdt=N\frac{d}{dt}(AB)\cdot\frac{lH}{N}dt=AlHdB=VHdB=$$Vd({\mu_0H^2}/{2})+\mu_0VHdM$\\
+\textbf{功的一般表达式}:$dW=\sum_{i=1}Y_idy_i$,其中$Y_i$--广义力,$y_i$--广义坐标\\
+\textbf{1.5 热力学第一定律}:自然界一切物质都具有能量,能量有各种不同的形式,可以从一种形式转化为另一种形式,从一个物体传递到另一个物体,在传递和转化中能量的数量不变;或第一类永动机(无需动力,不断自动做功的机器)是不可能造成的\\
+\textbf{内能的定义}:热一律意味着系统存在一态函数(内能),$U=U(V,T)$,仅有相对值,只含有关微观热运动的能量,不含系统整体的机械能;内能增量等于外界对系统做功与系统吸热之和$\Delta U=W+Q$;或$dU=\text{\textcrd}W+\text{\textcrd}Q$\\
+\textbf{1.6 热容和焓}
+\textbf{热容量}:系统升高单位温度所需吸收的热量,$C=\lim_{\Delta T\rightarrow0}\frac{\Delta Q}{\Delta T}$;\textbf{摩尔热容量}:$C_m=\frac{C}{n}$(与过程有关)\\
+\textbf{等容热容量}:等容过程系统升高单位温度所需吸收热量,$C_V=\lim_{\Delta T\rightarrow0}\left(\frac{\Delta Q}{\Delta T}\right)_V=\left(\frac{\partial U}{\partial T}\right)_V$\\
+\textbf{等压热容量}:等压过程系统升高单位温度所需吸收热量,$C_p=\lim_{\Delta T\rightarrow0}\left(\frac{\Delta Q}{\Delta T}\right)_p$\\
+\textbf{焓}:$H=U+pV$,等压过程系统吸收热量$=$焓的增量,$C_p=\left(\frac{\partial H}{\partial T}\right)_p$\\
+\textbf{1.7 理想气体的内能}
+\textbf{焦耳定律}:理想气体的内能只是温度的函数,与体积无关,$U=U(T)$;证明:实验得焦耳系数$J=\left(\frac{\partial T}{\partial V}\right)_U=0\Rightarrow\left(\frac{\partial U}{\partial V}\right)_T=-\left(\frac{\partial U}{\partial T}\right)_V\left(\frac{\partial T}{\partial V}\right)_U=0\Rightarrow U=U(T)$\\
+\textbf{理想气体的内能}:$U=U_0+\int C_VdT$;\textbf{理想气体的焓}:$H=H_0+\int C_pdT$\\
+对理想气体,$C_p-C_V=nR,C_V=\frac{nR}{\gamma-1},C_p=\gamma\frac{nR}{\gamma-1}$(\textbf{比热容比}$\gamma=\frac{C_p}{C_V}>1$)\\
+\textbf{1.8 理想气体的绝热过程}:$dU=dW\Rightarrow C_VdT=-pdV\Rightarrow C_V\frac{pdV+Vdp}{nR}=-pdV\Rightarrow\frac{dp}{p}=-\gamma\frac{dV}{V}\Rightarrow pV^{\gamma}=C_1,TV^{\gamma-1}=C_2,p^{\gamma-1}T^{-\gamma}=C_3$,$\gamma$可通过测声速得到\\
+\textbf{流体声速}:$a=\sqrt{\frac{dp}{d\rho}}$,声速$\gg$传热,可视为准静态绝热过程,$a^2=\left(\frac{\partial p}{\partial\rho}\right)_S=-v^2\left(\frac{\partial p}{\partial v}\right)_S=\gamma\frac{p}{\rho}$\\
+\textbf{1.9 理想气体的卡诺循环}\\
+\textbf{循环过程}:系统由某状态出发经一系列变化回到原状态的过程;对闭合$p\sim V$曲线,顺时针为热机循环,逆时针制冷循环\\
+\textbf{热机效率}:$\eta=\frac{W}{Q_1}=1-\frac{Q_2}{Q_1}$;\textbf{制冷机制冷系数}:$\eta'=\frac{Q_2}{W}=\frac{Q_2}{Q_1-Q_2}$\\
+\textbf{等温过程}:$Q=-W=\int_{V_A}^{V_B}pdV=\int_{V_A}^{V_B}\frac{RT}{V}dV=RT\ln\frac{V_B}{V_A}$\\
+\textbf{绝热过程}:$W=-\int_{V_A}^{V_B}pdV=-\text{const}\int_{V_A}^{V_B}\frac{dV}{V^{\gamma}}=\frac{\text{const}}{\gamma-1}\left(V_B^{-(\gamma-1)}-V_A^{-(\gamma-1)}\right)=\frac{p_BV_B-p_AV_A}{\gamma-1}=\frac{nR(T_B-T_A)}{\gamma-1}=C_V(T_B-T_A)$\\
+\textbf{卡诺循环}:含两个等温过程和两个准静态绝热过程的循环;吸热:等温膨胀:$Q_1=RT_1\ln({V_2}/{V_1})$,等温压缩:$Q_2=RT\ln({V_3}/{V_4})$,绝热膨胀/压缩:$Q=0$;输出功:$W=Q_1-Q_2=RT_1\ln({V_2}/{V_1})-RT_2\ln({V_3}/{V_4})$,$\because$绝热过程$TV^{\gamma-1}=\text{const}\therefore({V_2}/{V_1})=({V_3}/{V_4})\Rightarrow W=R(T_1-T_2)\ln({V_2}/{V_1})$\\
+\textbf{卡诺循环热转换效率}:$\eta=\frac{W}{Q_1}=1-\frac{T_2}{T_1}$恒$<1$且仅取决于热源温度,与工质无关;\textbf{制冷效率}:$\eta'=\frac{Q_2}{W}=\frac{T_2}{T_1-T_2}$可能$>1$且仅取决于热源温度,与工质无关\\
+\textbf{1.10 热力学第二定律~开尔文表述}:不可能从单一热源吸热使之完全变为有用功而不引起其他变化(意味着摩擦生热有方向性/不可逆,功可完全转换成热,反之不可,第二类永动机(单热源热机)不存在,热机至少有两个热源且$\eta<1$);\textbf{克劳修斯表述}:不可能把能量从低温物体传到高温物体而不引起其他变化(意味着热传导有方向性/不可逆);\textbf{两种表述等效}:若开尔文表述不成立,则克劳修斯表述也不成立:假设能从高温热源吸热$Q_1$全部转化为有用功,则用该有用功从低温热源吸热$Q_2$以向高温热源放热$Q_1+Q_2$,这相当于能量从低温热源传到高温热源而不产生其他变化,违背克劳修斯表述;若克劳修斯表述不成立,则开尔文表述也不成立:假设高温热源从低温热源吸热$Q_2$而不产生其他变化,则用热机从高温热源吸热$Q_1$,向低温热源放热$Q_2$并输出功$W=Q_1-Q_2$,这相当于热机仅从高温热源吸热$Q_1-Q_2$转变为有用功,违背开尔文表述\\
+设在某一过程$L$中,系统从状态$A$变为$B$.若能使系统从$B$恢复到$A$,同时外界也能恢复原状,则$L$称\textbf{可逆过程};否则称\textbf{不可逆过程}\\
+\textbf{1.11 卡诺定理}:所有工作在一定温度间的热机,以可逆热机效率最高,$\eta=1-\frac{Q_2}{Q_1}\leq1-\frac{T_2}{T_1}$(对可逆热机$=$,不可逆热机$<$);证明:设可逆热机效率$\eta_A$,不可逆热机效率$\eta_B$,假设$\eta_A<\eta_B$,则可用可逆热机从高温热源吸热$Q_1$,向低温热源放热$Q_2'$并做功$W'$,用输出的功驱动不可逆热机$B$从低温热源吸热$Q_2$并向高温热源放热$Q_1$,$\because\eta_A<\eta_B$,$\therefore Q_2>Q_2'$且剩下有用功$W'-W$,这相当于从低温热源吸热$Q_2-Q_2'$转化为有用功$W'-W$,违背开尔文表述;证明中未涉及循环工质的性质,故任意可逆热机的效率均为$1-{T_2}/{T_1}$\\
+\textbf{1.12 热力学温标}
+\textbf{的确定}:可逆热机效率仅与高/低温热源温度有关,对工作在温度为$\theta_3$和$\theta_1$的热源之间的热机,$\eta(\theta_3,\theta_1)=1-{Q_1}/{Q_3}\Rightarrow{Q_1}/{Q_3}=F(\theta_3,\theta_2)$,同理${Q_2}/{Q_3}=F(\theta_3,\theta_2)\Rightarrow{Q_2}/{Q_1}={F(\theta_3,\theta_2)}/{F(\theta_3,\theta_1)}=F(\theta_1,\theta_2)$,为使上式对$\forall\theta_3$成立,$F(\theta_1,\theta_2)={f(\theta_2)}/{f(\theta_1)}={Q_2}/{Q_1}$,由此定义\textbf{热力学温标}$T^*\propto f(\theta)$,设水三相点温度$37.16K$即确定热力学温标;将理想气体代入上述证明过程知热力学温标$=$理想气体温标\\
+\textbf{1.13 克劳修斯等式和不等式}:由卡诺定理得$\sum_{i=1}^2\frac{Q_i}{T_i}\leq0$;推广:$\sum_{i=1}^n\frac{Q_i}{T_i}=\oint\frac{dQ}{T}\leq0$(对可逆热机$=$,不可逆热机$<$);证:系统分别和温度为$T_1,\cdots,T_n$的$n$个热源热接触,同时有工作在$T_1,\cdots,T_n$和$T_0$间的$n$个可逆循环,$-{Q_n}/{T_n}+{Q_{0n}}/{T_0}=0$,从$T_0$总吸热$Q_0=\sum_{i=1}^nQ_{0i}=T_0\sum_{i=1}^n{Q_i}/{T_i}$,若$\sum_{i=1}^n{Q_i}/{T_i}>0$,则$Q_0=W+W_1+\cdots+W_n>0$,将$Q_0$全部转化为有用功,违背热二律,故$\sum_{i=1}^n{Q_i}/{T_i}\leq0$,若循环可逆,则反向循环也违背热二律,得证\\
+\textbf{1.14 熵和热力学基本方程}\quad
+\textbf{熵的定义}:由可逆循环$\oint{dQ}/{T}=0$,引入态函数\textbf{熵}$S_B-S_A=\int_A^B\frac{dQ}{T}$(沿可逆过程积分,不可逆过程的熵变可以用相同初末态的可逆过程计算)\\
+\textbf{1.15 理想气体的熵}:$dS=\frac{dQ}{T}={(C_VdT+pdV)}/{T}=C_V\frac{dT}{T}+nR\frac{dV}{V}\Rightarrow S=\int_{T_0}^TC_V\frac{dT}{T}+nR\ln\frac{V}{V_0}+S_0=C_V\ln\frac{T}{T_0}+nR\ln\frac{V}{V_0}+S_0$;或$dS={(C_pdT-pdV)}/{T}\Rightarrow S=C_p\ln\frac{T}{T_0}-nR\ln\frac{p}{p_0}+S_0$\\
+\textbf{1.16 热力学第二定律的数学表达}
+\textbf{熵增加原理}:设系统经任意过程由状态$A$到$B$,经可逆过程由$B$回$A$,$\oint{dQ}/{T}=\int_A^B{dQ}/{T}+\int_B^A{dQ_r}/{T}=\int_A^B{dQ}/{T}-\int_A^B{dQ_r}/{T}\leq0$,$\because S_B-S_A=\int_A^B{dQ_r}/{T}\therefore S_B-S_A\geq\int_A^B{dQ}/{T}\Rightarrow dS\geq{dQ}/{T}={(dU-dW)}/{T}\Rightarrow dU\leq TdS+dW$;对绝热过程,$S-S_0\geq0$,即\textbf{熵增加原理}:系统经绝热过程从一个状态过渡到另一个状态,它的熵永不减少,若过程可逆,则熵保持不变,若过程不可逆,则熵增加;\textbf{推论}:孤立系统内部任何自发过程总朝着熵增方向进行,当熵达最大,系统达平衡态\\
+\textbf{1.17 熵增加原理的简单应用}
+热量$Q$从高温热源$T_1$传到$T_2$:高温热源$T_1$向另一同为$T_1$的热源传热$Q$,$\because$等温物体间传热可逆,$\therefore\Delta S_1=-{Q}/{T_1}$,低温热源$T_2$吸热$Q$,$\Delta S_2={Q}/{T_1}$,总熵变$\Delta S={Q}/{T_2}-{Q}/{T_1}>0$不可逆\\
+等质量,温度分别为$T_1,T_2$的水等压绝热混合:$(T_1,p),(T_2,p)\rightarrow({(T_1+T_2)}/{2},p)\Rightarrow dS={dH}/{T}={C_pdT}/{T}\Rightarrow\Delta S=(\int_{T_1}^{(T_1+T_2)/2}+\int_{T_2}^{(T_1+T_2)/2}){C_pdT}/{T}=C_p\ln{(T_1+T_2)^2}/{4T_1T_2}$,当$T_1\neq T_2$,$\Delta S>0$,不可逆\\
+理想气体由$(T,V_1)$绝热自由膨胀至$(T,V_2)$,$\Delta S=\int_1^2{dQ}/{T}=\int_{V_1}^{V_2}{nR}/{V}dV=nR\ln({V_2}/{V_1})$;由1.15亦可得\\
+\textbf{1.18 自由能和吉布斯函数}
+\textbf{自由能的引入}:等温下,$S_B-S_A\geq Q/T\Rightarrow Q\leq T(S_B-S_A)$,又$U_B-U_A=W+Q\Rightarrow-W\leq(U_A-U_B)-T(S_A-S_B)$(当且仅当可逆过程,$=$成立),由此引入\textbf{自由能}$F=U-TS$及\textbf{最大功原理}:等温过程中,系统对外做功不大于其自由能的减少;或自由能的减少是等温过程从系统所能得到的最大功,$-W=F_A-F_B$;\textbf{自由能判据}:系统在等温等容条件下,自由能永不增加;系统的不可逆反应总朝着自由能减小的方向进行\\
+\textbf{吉布斯函数的引入}:等温等压下,$-W=-p(V_B-V_A)\leq F_A-F_B$,由此引入\textbf{吉布斯函数}$G=F+pV=U-TS+pV$及\textbf{吉布斯函数判据}:等温等压过程中,系统吉布斯函数永不增加;该条件下,系统中发生的不可逆过程总朝着吉布斯函数减小的方向进行
+\end{multicols}
+
+\begin{multicols}{2}
+\noindent\textbf{Chap2 均匀物质的热力学性质}
+\textbf{2.1 内能、焓、自由能和吉布斯函数的全微分}\\
+\textbf{热力学基本微分方程}:$dU=TdS-pdV,H=TdS+Vdp,dF=-SdT-pdV,dG=-SdT+Vdp$\\
+\textbf{麦克斯韦关系}:$\left(\frac{\partial U}{\partial S}\right)_V=T,\left(\frac{\partial U}{\partial V}\right)_S=-p\Rightarrow\frac{\partial^2U}{\partial S\partial V}=\bm{\left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial p}{\partial S}\right)_V}$\\
+\indent$\left(\frac{\partial H}{\partial S}\right)_p=T,\left(\frac{\partial H}{\partial p}\right)_S=V\Rightarrow\frac{\partial^2H}{\partial S\partial p}=\bm{\left(\frac{\partial T}{\partial p}\right)_S=\left(\frac{\partial V}{\partial S}\right)_p}$\\
+\indent$\left(\frac{\partial F}{\partial T}\right)_V=-S,\left(\frac{\partial F}{\partial V}\right)_T=-p\Rightarrow\frac{\partial^2F}{\partial T\partial V}=\bm{\left(\frac{\partial S}{\partial V}\right)_T=\left(\frac{\partial p}{\partial T}\right)_V}$\\
+\indent$\left(\frac{\partial G}{\partial T}\right)_p=-S,\left(\frac{\partial G}{\partial p}\right)_T=V\Rightarrow\frac{\partial^2G}{\partial T\partial p}=\bm{\left(\frac{\partial S}{\partial p}\right)_T=-\left(\frac{\partial V}{\partial T}\right)_p}$\\
+\textbf{2.2 麦氏关系的简单应用}
+\textbf{内能方程}:$dU=\left(\frac{\partial U}{\partial T}\right)_VdT+\left(\frac{\partial U}{\partial V}\right)_TdV,dS=\left(\frac{\partial S}{\partial T}\right)_VdT+\left(\frac{\partial S}{\partial V}\right)_TdV=\left(\frac{\partial S}{\partial T}\right)_VdT+\left(\frac{\partial p}{\partial T}\right)_V\Rightarrow dU=T\left(\frac{\partial S}{\partial T}\right)_VdT+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]dV\Rightarrow\bm{C_V=\left(\frac{\partial U}{\partial T}\right)_V=T\left(\frac{\partial S}{\partial T}\right)_V,\left(\frac{\partial U}{\partial V}\right)_T=T\left(\frac{\partial p}{\partial T}\right)_V-p}$;对理想气体$=\frac{nRT}{V}-p=0$;范式气体$=\frac{nRT}{V-nb}-p=\frac{an^2}{V^2}$\\
+\textbf{焓方程}:$dH=\left(\frac{\partial H}{\partial T}\right)_pdT+\left(\frac{\partial H}{\partial p}\right)_Tdp,dS=\left(\frac{\partial S}{\partial T}\right)_pdT+\left(\frac{\partial S}{\partial p}\right)_Tdp=\left(\frac{\partial S}{\partial T}\right)_pdT-\left(\frac{\partial V}{\partial T}\right)_pdp\Rightarrow dH=TdS+Vdp=T\left(\frac{\partial S}{\partial T}\right)_pdT+\left[V-T\left(\frac{\partial V}{\partial T}\right)_p\right]dp\Rightarrow\bm{C_p=\left(\frac{\partial H}{\partial T}\right)_p=T\left(\frac{\partial S}{\partial T}\right)_p,\left(\frac{\partial H}{\partial p}\right)_T=V-T\left(\frac{\partial V}{\partial T}\right)_p}$\\
+\textbf{定压与定容热容量之差}:$\left(\frac{\partial S}{\partial T}\right)_p=\left(\frac{\partial S}{\partial T}\right)_V+\left(\frac{\partial S}{\partial V}\right)_T\left(\frac{\partial V}{\partial T}\right)_p\Rightarrow C_p-C_V=T\left[\left(\frac{\partial S}{\partial T}\right)_p-\left(\frac{\partial S}{\partial T}\right)_V\right]=T\left(\frac{\partial S}{\partial V}\right)_T\left(\frac{\partial V}{\partial T}\right)_p=T\left(\frac{\partial p}{\partial T}\right)_V\left(\frac{\partial V}{\partial T}\right)_p=TVp\alpha\beta=\frac{VT\alpha^2}{\kappa_T}$;对理想气体,$C_p-C_V=nR$\\
+\textbf{2.3 气体的节流过程和绝热膨胀过程}
+\textbf{节流过程}:由不导热材料包着的管子中有一多孔塞或节流阀,两边各维持着较高/低的压强$p_1,p_2$,气体由高压流至低压并达定常状态;\textbf{焦汤效应}:节流过程前后气体温度变化;外界对气体做功:$W=p_1V_1-p_2V_2,Q=0\Rightarrow\Delta U=p_1V_1-p_2V_2\Rightarrow H_2=U_2+p_2V_2=H_1=U_1+p_1V_1$,绝热节流为\textbf{等焓过程}\\
+\textbf{焦汤系数}:$\mu=\left(\frac{\partial T}{\partial p}\right)_H$,表征定焓下气体温度随压强变化率;由$H=H(T,p)$的链式关系,$\mu=-\left(\frac{\partial T}{\partial H}\right)_p\left(\frac{\partial H}{\partial p}\right)_T=\frac{1}{C_p}\left[T\left(\frac{\partial V}{\partial T}\right)_p-V\right]=\frac{V}{C_p}(T\alpha-1)$;对理想气体,$\alpha=\frac{1}{T}\Rightarrow\mu=0$,节流前后温度不变;对实际气体,$\alpha T<1\Rightarrow\mu<0$,节流制温;$\alpha T>1\Rightarrow\mu>0$,节流制冷(低温区);优:一定压强降落下,温度越低,获得温度降落比例越大;劣:气体的初始温度必须低于反转温度,可先绝热制冷,再节流制冷\\
+\textbf{气体绝热膨胀}:$\mu_S=\left(\frac{\partial T}{\partial p}\right)_S=-\left(\frac{\partial T}{\partial S}\right)_p\left(\frac{\partial S}{\partial p}\right)_T=\frac{T}{C_p}\left(\frac{\partial V}{\partial T}\right)_p=\frac{VT\alpha}{C_p}$;优:不必预冷;劣:膨胀机需移动,温度越低降温效应越小\\
+\textbf{2.4 基本热力学函数的确定}\\
+$dU=C_VdT+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]dV\Rightarrow U=\int\left\{C_VdT+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]dV\right\}+U_0$\\
+$dS=\frac{C_V}{T}dT+\left(\frac{\partial p}{\partial T}\right)_VdV\Rightarrow S=\int\left[\frac{C_V}{T}dT+\left(\frac{\partial p}{\partial T}\right)_V\right]+S_0$\\
+$dH=C_pdT+\left[V-T\left(\frac{\partial V}{\partial T}\right)_p\right]dp\Rightarrow H=\int\left\{C_pdT+\left[V-T\left(\frac{\partial V}{\partial T}\right)_p\right]dp\right\}+H_0$\\
+$dS=\frac{C_p}{T}dT-\left(\frac{\partial V}{\partial T}\right)_pdp\Rightarrow S=\int\left[\frac{C_p}{T}dT-\left(\frac{\partial V}{\partial T}\right)_pdp\right]+S_0$\\
+计算要点:1.已知物态方程和$C_V,C_p$,可得$U,S$和$H$;2.由此得其他热力学函数;3.$C_V(T,V)=C_V(T,V_0)+T\int_{V_0}^V\left(\frac{\partial^2p}{\partial T^2}\right)_VdV,C_p(T,p)=C_p(T,p_0)-T\int_{p_0}^p\left(\frac{\partial^2V}{\partial T^2}\right)_pdp$\\
+\textbf{2.5 特性函数}:若适当选择独立变量(自然变量),则只需知一热力学函数,就可通过求偏导而求得均匀系统的全部热力学函数,从而完全确定系统的平衡性质,该热力学函数称\textbf{特性函数}:$U(S,V),H(S,p),F(T,V),G(T,p)$\\
+自由能$F(T,V)$作特性函数:$S=-\left(\frac{\partial F}{\partial T}\right)_V,p=-\left(\frac{\partial F}{\partial V}\right)_T(\text{物态方程}),U=F+TS=F-T\left(\frac{\partial F}{\partial T}\right)_V(\text{吉布斯-亥姆霍兹方程}),H=U+pV,G=F+pV$\\
+吉布斯函数$G(T,p)$作为特性函数$S=-\left(\frac{\partial G}{\partial T}\right)_p,V=\left(\frac{\partial G}{\partial p}\right)_T(\text{物态方程}),H=G+TS=G-T\left(\frac{\partial G}{\partial T}\right)_p(\text{吉布斯-亥姆霍兹方程}),F=G-pV,U=F+TS=G-pV+TS$\\
+对表面系统,表面张力系数$\sigma$相当于$p$,表面积$A$相当于$V$\\
+\textbf{2.6 热辐射的热力学理论}
+\textbf{热辐射}:受热物体辐射的电磁波;任何物体在任何温度下均会辐射电磁波,热辐射强度和强度按频率的分布与物体的温度和性质有关;\textbf{平衡辐射}:物体对电磁波的吸收与辐射达平衡,热辐射的特性只取决于温度,而与其它性质无关,如一个封闭空窑,窑壁温度$T$,不断向空窑发射和吸收电磁波,当达平衡辐射,两者有共同的温度;\textbf{平衡辐射特性}:包含各种频率,沿各个方向传播,振幅和相位均无规;窑内平衡辐射空间均匀且各向同性;内能密度和内能密度按频率的分布仅取决于温度,证明:考虑两个由小孔连接的等温空窑,若辐射场在任意给定的频率区间内的内能密度在两个空窑内不等,能量能通过小孔从内能密度较高的空窑辐射到较低处,使前者温度降低后者温度升高,自发形成温度差,违背热二律\\
+\textbf{平衡辐射特性的热力学函数}:\textbf{辐射压力和辐射能量之间的关系}:$p=u/3$,\textbf{状态方程}:$U=U(T,V)=Vu(T)$,又$\left(\frac{\partial U}{\partial V}\right)_T=T\left(\frac{\partial p}{\partial T}\right)_V-p\Rightarrow u=\frac{1}{3}T\frac{du}{dT}-\frac{1}{3}u\Rightarrow u=aT^4\Rightarrow U=aVT^4,dS=\frac{dU+pdV}{T}=4aT^2VdT+\frac{4}{3}aT^3dV\Rightarrow S=\frac{4}{3}aT^3V$,可逆绝热过程熵不变$\Rightarrow T^3V=\text{const},pV^{4/3}=\text{const}\Rightarrow F=U-TS=-\frac{1}{3}aVT^4,H=U+pV=\frac{4}{3}aVT^4,G=F+pV=0$(与光子数不守恒有关)\\
+各向同性辐射场中,传播方向在立体角$d\Omega=\sin\theta d\varphi d\theta$的辐射能量密度:$\frac{ud\Omega}{4\pi}=\frac{u}{4\pi}\sin\theta d\varphi d\theta$,单位时间内,传播方向在立体角$d\Omega$内通过$dA$向一侧辐射的能量:$\frac{ud\Omega}{4\pi}c\cos\theta dA=\frac{cu}{4\pi}\cos\theta\sin\theta d\varphi d\theta dA$,单位时间内通过$dA$向一侧辐射的总辐射能量:$JdA=\frac{cudA}{4\pi}\int_0^{\frac{\pi}{2}}\sin\theta\cos\theta d\theta\int_0^{2\pi}d\varphi=\frac{1}{4}cudA$,辐射通量密度$J=\frac{1}{4}cu=\frac{1}{4}acT^4=\sigma T^4$(\textbf{斯特藩-玻尔兹曼定律})(斯特藩常数$\sigma=5.669\times10^{-8}\text{W}\cdot\text{m}^{-2}\cdot\text{K}^{-4}$)\\
+\textbf{吸收系数}$\alpha_{\omega}$:物体对频率在$\omega$附近的辐射能量吸收百分比;面辐射强度:$e_{\omega}$:单位时间内从物体单位表面积辐射频率在$\omega$附近的能量;当平衡辐射,$\frac{1}{4}\alpha_{\omega}cu(\omega,T)d\omega=e_{\omega}d\omega\Rightarrow\frac{e_{\omega}}{\alpha_{\omega}}=\frac{c}{4}u(\omega,T)$(\textbf{基尔霍夫定律});基尔霍夫定律指出物体在任何频率处的面辐射强度与吸收因数之比对所有物体相同,是频率和温度的普适函数;\textbf{绝对黑体}:$\alpha_{\omega}=1$的物体\\
+\textbf{2.7 磁介质的热力学}\quad
+状态方程:$f(\text{磁场强度}\mathcal{H},\text{总磁矩}m=MV,T)=0$;对顺磁质,$m={CV\mathcal{H}}/{T}$;若系统只含磁介质,不含磁场,体积不变,$dW=\mu_0\mathcal{H}dm$,$p\rightarrow-\mu_0\mathcal{H},V\rightarrow m$\\
+\textbf{热力学基本方程}:$dU=TdS+\mu_0\mathcal{H}dm,H=U-\mu_0\mathcal{H}m,dH=TdS-\mu_0md\mathcal{H},F=U-TS,dF=-SdT+\mu_0\mathcal{H}dm,G=F-\mu_0\mathcal{H}m=U-TS-\mu_0\mathcal{H}m,dG=-SdT-\mu_0md\mathcal{H}$\\
+\textbf{麦氏关系}:$\left(\frac{\partial T}{\partial m}\right)_S=\mu_0\left(\frac{\partial\mathcal{H}}{\partial S}\right)_m,\left(\frac{\partial T}{\partial\mathcal{H}}\right)_S=-\mu_0\left(\frac{\partial m}{\partial S}\right)_{\mathcal{H}},\left(\frac{\partial S}{\partial m}\right)_T=-\mu_0\left(\frac{\partial\mathcal{H}}{\partial T}\right)_m,\left(\frac{\partial S}{\partial\mathcal{H}}\right)_T=\mu_0\left(\frac{\partial m}{\partial T}\right)_{\mathcal{H}}$\\
+\textbf{绝热去磁}:$\left(\frac{\partial T}{\partial\mathcal{H}}\right)_S=-\left(\frac{\partial S}{\partial\mathcal{H}}\right)_T\left(\frac{\partial T}{\partial S}\right)_H=-\frac{\mu_0T}{C_{\mathcal{H}}}\left(\frac{\partial m}{\partial T}\right)_{\mathcal{H}},C_{\mathcal{H}}=T\left(\frac{\partial S}{\partial T}\right)_{\mathcal{H}},\left(\frac{\partial S}{\partial\mathcal{H}}\right)_T=\mu_0\left(\frac{\partial m}{\partial T}\right)_{\mathcal{H}}$,设磁介质满足居里定律,$m=\frac{CV}{T}\mathcal{H}\Rightarrow\left(\frac{\partial T}{\partial H}\right)_S=\frac{CV}{C_{\mathcal{H}}T}\mu_0\mathcal{H}>0$,绝热去磁制冷\\
+\textbf{2.8 获得低温的方法}:节流制冷;蒸发冷却;\textbf{磁制冷却}:等温磁化$+$绝热去磁(当$T\rightarrow$mK量级,顺磁离子间磁矩相互作用不能忽略,相当于产生一个等效磁场,使磁矩分布有序化,该方法失效)
+\end{multicols}
+
+\begin{multicols}{2}
+\noindent\textbf{Chap3 单元系的相变}
+\textbf{3.1 热动平衡判据}
+由熵判据,当孤立系统状态产生微小虚变动,熵变$\Delta S=\delta S+\frac{1}{2}\delta^2S$;平衡态:$\delta S=0$;稳定平衡:$\delta^2S<0$,不稳定平衡:$\delta^2S>0$,中性平衡:$\delta^2S=0$;若熵不止一极大,则最大对应稳定平衡,其它极大对应亚稳定平衡\\
+由自由能判据,自由能虚变动$\Delta F=\delta F+\frac{1}{2}\delta^2F$;平衡态:$\delta F=0$;稳定平衡:$\delta^2F>0$,不稳定平衡:$\delta^2F<0$,中性平衡:$\delta^2F=0$\\
+由吉布斯函数判据,$\Delta G=\delta G+\frac{1}{2}\delta^2G$;平衡态:$\delta G=0$;稳定平衡:$\delta^2G>0$,不稳定平衡:$\delta^2G<0$,中性平衡:$\delta^2G=0$\\
+\textbf{热动平衡条件}:设孤立均匀系统,子系统$(T,p)$,系统其它部分$(T_0,p_0)$,$\because U+U_0=\text{const},V+V_0=\text{const}$,发生变动$\delta U+\delta U_0=0,\delta V+\delta V_0=0$,又$\delta S=\frac{\delta U+p\delta V}{T},\delta S_0=\frac{\delta U_0+p_0dV_0}{T_0}=-\frac{\delta U+p_0\delta V}{T_0},\delta S+\delta S_0=0\Rightarrow\delta U(\frac{1}{T}-\frac{1}{T_0})+\delta V(\frac{p}{T}-\frac{p_0}{T_0})=0\Rightarrow T=T_0,p=p_0$,达平衡时,系统内温度和压强处处相等\\
+\textbf{稳定平衡条件}:$\delta^2S=-\frac{C_V}{T^2}(\delta T)^2+\frac{1}{T}\left(\frac{\partial p}{\partial V}\right)_T(\delta V)^2\Rightarrow C_V>0,\kappa_T>0$;证明:$\delta^2S+\delta^2S_0\approx\delta^2S=\left(\frac{\partial^2S}{\partial U^2}\right)(\delta U)^2+2\left(\frac{\partial^2S}{\partial U\partial V}\right)\delta U\delta V+\left(\frac{\partial^2S}{\partial V^2}\right)(\delta V)^2=\left[\frac{\partial}{\partial U}\left(\frac{\partial S}{\partial U}\right)_V\delta U+\frac{\partial}{\partial V}\left(\frac{\partial S}{\partial U}\right)_V\delta V\right]\delta U+\left[\frac{\partial}{\partial U}\left(\frac{\partial S}{\partial V}\right)_U\delta U+\frac{\partial}{\partial V}\left(\frac{\partial S}{\partial V}\right)_U\delta V\right]\delta V=\left[\frac{\partial}{\partial U}\left(\frac{1}{T}\right)\delta U+\frac{\partial}{\partial V}\left(\frac{1}{T}\right)\delta V\right]\delta U+\left[\frac{\partial}{\partial U}\left(\frac{p}{T}\right)\delta U+\frac{\partial}{\partial V}\left(\frac{p}{T}\right)\delta V\right]\delta V=\delta\left(\frac{1}{T}\right)\delta U+\delta\left(\frac{p}{T}\right)\delta V,$代入$\delta\left(\frac{1}{T}\right)=-\frac{1}{T^2}\delta T,\delta\left(\frac{p(T,V)}{T}\right)=\frac{1}{T^2}\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]\delta T+\frac{1}{T}\left(\frac{\partial p}{\partial V}\right)_T\delta V,\delta U=C_V\delta T+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]\delta V$,得证\\
+\textbf{3.2 开系的热力学基本方程}\quad
+$G=G(T,p,n)\Rightarrow dG=\left(\frac{\partial G}{\partial T}\right)_{p,n}dT+\left(\frac{\partial G}{\partial p}\right)_{T,n}dp+\left(\frac{\partial G}{\partial n}\right)_{T,p}dn=-SdT+Vdp+\mu dn$,其中\textbf{化学势}$\mu=\left(\frac{\partial G}{\partial n}\right)_{T,p}$;$G(T,p,n)=nG_m(T,p)\Rightarrow\mu=G_m$\\
+\textbf{开系内能/焓和自由能的微分}:\textbf{内能的微分}$U=G+TS-pV\Rightarrow dU=TdS-pdV+\mu dn(\textbf{开系的热力学基本方程})\Rightarrow\mu=\left(\frac{\partial U}{\partial n}\right)_{S,V}$;\textbf{焓的微分}:$H=G+TS\Rightarrow dH=TdS+Vdp+\mu dn\Rightarrow\mu=\left(\frac{\partial H}{\partial n}\right)_{S,p}$;\textbf{自由能的微分}:$F=G-pV\Rightarrow dF=-SdT-pdV+\mu dn\Rightarrow\mu=\left(\frac{\partial F}{\partial n}\right)_{T,V}$\\
+\textbf{巨热力学势}:$J=J(T,V,\mu)=F-\mu n=F-G=-pV\Rightarrow$\textbf{巨热力学势的微分}$dJ=-SdT-pdV-nd\mu,S=-\left(\frac{\partial J}{\partial T}\right)_{V,\mu},p=-\left(\frac{\partial J}{\partial V}\right)_{T,\mu},n=-\left(\frac{\partial J}{\partial\mu}\right)_{T,V}$\\
+\textbf{3.3 单元系的复相平衡条件}
+设单元两相孤立系($\alpha:(U^{\alpha},V^{\alpha},n^{\alpha}),\beta:(U^{\beta},V^{\beta},n^{\beta})$):$U^{\alpha}+U^{\beta}=\text{const},V^{\alpha}+V^{\beta}=\text{const},n^{\alpha}+n^{\beta}=\text{const}\Rightarrow\delta U^{\alpha}+\delta U^{\beta}=0,\delta V^{\alpha}+\delta V^{\beta}=0,\delta n^{\alpha}+\delta n^{\beta}=0\Rightarrow\delta S^{\alpha}+\delta S^{\beta}=\frac{\delta U^{\alpha}+p^{\alpha}\delta V^{\alpha}-\mu^{\alpha}\delta n^{\alpha}}{T^{\alpha}}+\frac{\delta U^{\beta}+p^{\beta}\delta V^{\beta}-\mu^{\beta}\delta n^{\beta}}{T^{\beta}}=\delta U^{\alpha}\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\beta}}\right)+\delta V^{\alpha}\left(\frac{p^{\alpha}}{T^{\alpha}}-\frac{p^{\beta}}{T^{\beta}}\right)-\delta n^{\alpha}\left(\frac{\mu^{\alpha}}{T^{\alpha}}-\frac{\mu^{\beta}}{T^{\beta}}\right)=0\Rightarrow$\textbf{热平衡条件}:$T^{\alpha}=T^{\beta}$;\textbf{力学平衡条件}:$p^{\alpha}=p^{\beta}$;\textbf{相平衡条件}:$\mu^{\alpha}=\mu^{\beta}$;若$T^{\alpha}\neq T^{\beta}\Rightarrow\delta U^{\alpha}\left(\frac{1}{T^{\alpha}}-\frac{1}{T^{\beta}}\right)>0$;当$T^{\alpha}=T^{\beta}$,若$p^{\alpha}\neq p^{\beta}\Rightarrow\delta V^{\alpha}>0$;当$T^{\alpha}=T^{\beta}$,若$\mu^{\alpha}\neq\mu^{\beta}\Rightarrow\delta n^{\alpha}\left(\frac{\mu^{\alpha}}{T^{\alpha}}-\frac{\mu^{\beta}}{T^{\beta}}\right)>0$\\
+\textbf{3.4 单元复相系的平衡性质}
+对两相共存系,$\mu^{\alpha}(T,p)=\mu^{\beta}(T,p)$;\textbf{气化线}:液气共存;\textbf{熔解线}:固液共存;\textbf{升华线}:固气共存;\textbf{三相点}:以上三线的交点,固液气可平衡共存,有确定温度和压强;\textbf{临界点}:气化线的终点,高于临界温度则液相不存在;\textbf{单相区}:若在某温度和压强范围,$\mu^{\alpha}(T,p)$较其他$\mu(T,p)$更低,则系统将以$\alpha$相单独存在;\textbf{相平衡曲线}:若某温度和压强下,两相化学势相等,$\mu^{\alpha}(T,p)=\mu^{\beta}(T,p)$,则系统处于两相共存的平衡态,由此得到的$p-T$关系曲线即\textbf{相平衡曲线};平衡曲线上,$p,T$仅一个可独立改变,两相可以任意比例共存,$G(T,p)=\textbf{const},\delta^2g=0$\\
+\textbf{克拉珀龙方程}:沿着相平衡曲线,$\mu^{\alpha}(T,p)=\mu^{\beta}(T,p),\mu^{\alpha}(T+dT,p+dp)=\mu^{\beta}(T+dT,p+dp)\Rightarrow d\mu^{\alpha}=d\mu^{\beta}$,又$d\mu=-S_mdT+V_mdp\Rightarrow-S_m^{\alpha}dT+V_m^{\alpha}dp=-S_m^{\beta}dT+V_m^{\beta}dp\Rightarrow\frac{dp}{dT}=\frac{S_m^{\beta}-S_m^{\alpha}}{V_m^{\beta}-V_m^{\alpha}}=\frac{L}{T(V_m^{\beta}-V_m^{\alpha})}$(\textbf{克拉珀龙方程},\textbf{相变潜热}$L=T(S_m^{\beta}-S_m^{\alpha})$);气化/升华线斜率$>0$,大部分物质熔解线斜率$>0$(例外:冰)\\
+设$L=L_0+cT$,$\beta$为理想气体,忽略$\alpha$体积,设则$\frac{dp}{dT}=\frac{Lp}{RT^2}\Rightarrow\ln p=A-\frac{L_0}{RT}+\frac{c}{RT}\ln T$\\
+\textbf{相变潜热随温度变化率}:$\frac{dL}{dT}=C_{p,m}^{\beta}-C_{p,m}^{\alpha}+\frac{L}{T}+\frac{L}{T}-\left[\left(\frac{\partial V_m^{\beta}}{\partial T}\right)_p-\left(\frac{\partial V_m^{\alpha}}{\partial T}\right)_p\right]\frac{L}{V_m^{\beta}-V_m^{\alpha}}$,若$\alpha$为液相,$\beta$为气相,则$\frac{dL}{dT}=C_{p,m}^{\beta}-C_{p,m}^{\alpha}$;证明:$L=T(S_m^{\beta}-S_m^{\alpha})\Rightarrow\frac{dL}{dT}=S_m^{\beta}-S_m^{\alpha}+T\left(\frac{dS_m^{\beta}}{dT}-\frac{dS_m^{\alpha}}{dT}\right)=\frac{L}{T}+T\left(\frac{dS_m^{\beta}}{dT}-\frac{dS_m^{\alpha}}{dT}\right)$,又$\frac{dS_m}{dT}=\left(\frac{\partial S_m}{\partial T}\right)+\left(\frac{\partial S}{\partial p}\right)_T\frac{dp}{dT}=\frac{C_{p,m}}{T}-\left(\frac{\partial V_m}{\partial T}\right)_p\frac{dp}{dT},T\left(\frac{dS_m^{\beta}}{dT}-\frac{dS_m^{\alpha}}{dT}\right)=C_{p,m}^{\beta}-C_{p,m}^{\alpha}-\left[\left(\frac{\partial V_m^{\beta}}{\partial T}\right)_p-\left(\frac{\partial V_m^{\alpha}}{\partial T}\right)_p\right]\frac{L}{V_m^{\beta}-V_m^{\alpha}}$,回代得证,若$\alpha$液$\beta$气,则$pV^{\beta}=RT\Rightarrow\frac{dL}{dT}\approx C_m^{\beta}-C_{p,m}^{\alpha}+\frac{L}{T}-\left(\frac{\partial V_m^{\beta}}{\partial T}\right)_p\frac{L}{V_m}=C_{p,m}^{\beta}-C_{p,m}^{\alpha}$\\
+\textbf{3.5 临界点和气液两相的转变}
+\textbf{液体等温压缩液化}:$OB$,压力增大,达某压力始凝结,$BA$,气液相平衡共存,凝结液体增多直至全部化为液体,$AR$液体等温压缩;随着温度升高,AB靠近,气液比容差缩小,当达临界点$C$,$AB$重合,饱和蒸汽和液体无差别,$T_c,p_c,V_c$称临界温度/压强/比容;当$T>T_c$,系统恒为气态\\
+\textbf{范氏等温线}:$T>T_c$时,类似理想气体等温线,$=T_c$时,在$C$有一拐点,$<T_c$时,曲线有一极小和一极大;$d\mu=-S_mdT+V_mdp,\mu=\mu_0+\int_{p_0}^pV_mdp$,在$p_1<p<p_2$之间,对应每个$p$,都有三个$V$,OKB(气)和AMR(液)段化学势最小,稳定平衡,NJ段,$(\partial p/\partial V_m)_T>0$,化学势最大,不满足稳定平衡,不可能存在,BN和JA段,满足稳定平衡条件,可能存在,比AM和BK化学势大,亚稳态;稳定平衡条件下,等温压缩应沿$OKBAMR$;等面积法则:$\mu_A=\mu_B\Rightarrow\int_{\text{BNDJA}}V_mdp=0\Rightarrow S_{\text{BND}}=S_{\text{DJA}}$\\
+\textbf{临界点}$T_c,p_c$满足$\left(\frac{\partial p}{\partial V_m}\right)_{T_c}=0,\left(\frac{\partial^2p}{\partial V_m^2}\right)_{T_c}=0$,代入范氏方程得$\frac{-RT_c}{(V_{mc}-b)^2}+\frac{2a}{V_{mc}^3}=0,\frac{2RT_c}{(V_{mc}-b)^3}-\frac{6a}{V_{mc}^4}=0\Rightarrow V_{mc}=3b,T_c=\frac{8a}{27Rb},p_c=\frac{a}{27b^2}$\\
+\textbf{范氏对比方程}令$t^*=\frac{T}{T_c},P^*=\frac{p}{p_c},v^*=\frac{V_m}{V_{mV}}$,范氏方程表为$(p^*+\frac{3}{v^{*2}})(v^*-\frac{1}{3})=\frac{8}{3}t^*$\\
+\textbf{临界态的平衡稳定条件}:$\left(\frac{\partial p}{\partial V_m}\right)_T=0,\left(\frac{\partial^2p}{\partial V_m^2}\right)=0,\left(\frac{\partial^3p}{\partial V_m^3}\right)<0$;证明:设液/气相的摩尔体积$V_m,V_m+\delta V_m$,$p(V_m+\delta V_m,T)=p(V_m,T)=p(V_m,T)+({\partial p}/{\partial V_m})_T\delta V_m+\frac{1}{2}({\partial^2p}/{\partial V_m^2})(\delta V_m)^2\Rightarrow({\partial p}/{\partial V_m})_T+\frac{1}{2}({\partial^2p}/{\partial V_m^2})_T\delta V_m=0,\because\delta V_m\rightarrow0\therefore({\partial p}/{\partial V_m})_T=0,\Delta S=\delta S_m+\delta^2S_m/2+\delta^3S_m/3!+\delta^4S_m/4!+\cdots,\delta^2S=-({C_{V,m}}/{T^2})(\delta T)^2+\frac{1}{T}({\partial p}/{\partial V_m})_T(\delta V_m)^2,\because\delta T=0,\therefore\delta^2S_m=0,\therefore$要求$\delta^3S_m<0$或$\delta^3S_m=0,\delta^4S_m<0$,又$\delta^3S_m=\delta(\delta^2S_m)=\frac{\partial}{\partial T}(\delta^2S_m)\delta T+\frac{\partial}{\partial V_m}(\delta^2S_m)\delta V_m=\frac{\partial}{\partial V_m}(\delta^2S_m)\delta V_m=\frac{\partial}{\partial V_m}(\frac{1}{T}({\partial p}/{\partial V_m})_T(\delta V_m)^2)\delta V_m=\frac{1}{T}({\partial^2p}/{\partial V_m^2})_T(\delta V_m)^3,\because\delta V_m=\text{arb},\therefore({\partial^2p}/{\partial V_m^2})_T=0\Rightarrow\delta^3S_m=0,\delta^4S_m=\delta(\delta^3S_m)=\frac{1}{T}({\partial^3p}/{\partial V_m^3})_T(\delta V_m)^4<0\Rightarrow({\partial^3p}/{\partial V_m^3})_T<0$\\
+\textbf{3.7 相变的分类}
+\textbf{一级相变}:伴随相变潜热(熵突变)和体积突变,$\mu^{(1)}=\mu^{(2)},V_m^{(1)}=V_m^{(2)},S_m^{(1)}=S_m^{(2)}$,相平衡曲线斜率:$\frac{dp}{dT}=\frac{S_m^{(2)}-S_m^{(1)}}{V_m^{(2)}-V_m^{(1)}}$\quad
+\textbf{爱伦费斯特相变分类}:\textbf{一级相变}:两相化学势连续,化学势对温度和压强的一阶偏导突变,$\mu^{(1)}=\mu^{(2)},V_m^{(1)}=V_m^{(2)},S_m^{(1)}=S_m^{(2)},\left(\frac{\partial\mu^{(1)}}{\partial p}\right)_T\neq\left(\frac{\partial\mu^{(2)}}{\partial p}\right)_T,\left(\frac{\partial\mu^{(1)}}{\partial T}\right)_p\neq\left(\frac{\partial\mu^{(2)}}{\partial T}\right)_p$;\textbf{二级相变}:化学势及其一阶偏导连续,二阶偏导突变,$\cdots,\left(\frac{\partial\mu^{(1)}}{\partial p}\right)_T=\left(\frac{\partial\mu^{(2)}}{\partial p}\right)_T,\left(\frac{\partial\mu^{(1)}}{\partial T}\right)_p=\left(\frac{\partial\mu^{(2)}}{\partial T}\right)_p,\frac{\partial^2\mu^{(1)}}{\partial T^2}\neq\frac{\partial^2\mu^{(2)}}{\partial T^2},\frac{\partial^2\mu^{(1)}}{\partial T\partial p}\neq\frac{\partial^2\mu^{(2)}}{\partial T\partial p},\frac{\partial^2\mu^{(1)}}{\partial p^2}\neq\frac{\partial^2\mu^{(2)}}{\partial p^2}$,二级相变特征:$C_{p,m}=T\left(\frac{\partial S_m}{\partial T}\right)_p=T\frac{\partial^2\mu}{\partial T^2},\alpha=\frac{1}{V_m}\frac{\partial^2\mu}{\partial T\partial p},\kappa_T=-\frac{1}{V_m}\frac{\partial^2\mu}{\partial p^2},\frac{dp}{dT}=\frac{\alpha^{(2)}-\alpha^{(1)}}{\kappa^{(2)}-\kappa^{(1)}}=\frac{C_{p,m}^{(2)}-C_{p,m}^{(1)}}{TV_m(\alpha^{(2)}-\alpha^{(1)})}$;\textbf{$n$级相变}:化学势及其前$(n-1)$阶偏导连续,$n$阶偏导突变;\textbf{连续相变}:二级及以上的相变
+\end{multicols}
+
+\begin{multicols}{2}
+\noindent\textbf{Chap4 多元系的复相系平衡和化学平衡~热力学第三定律}~\textbf{4.1 多元系热力学函数和热力学方程}\\
+\textbf{多元系}:含有两种及以上化学组分的系统;可为均匀系,也可为复相系;既可发生相变,也可发生化学变化\\
+选$T,p,n_1,\cdots,n_k$为状态参量,则$V=V(T,p,n_1,\cdots,n_k),U=U(T,p,n_1,\cdots,n_k),S=S(T,p,n_1,\cdots,n_k)$;由广延量性质,若保持系统温度和压力不变而令各组元摩尔数均增为$\lambda$倍,则$V=\lambda V(T,p,n_1,\cdots,n_k),U=\lambda U(T,p,n_1,\cdots,n_k),S=\lambda S(T,p,n_1,\cdots,n_k)$;由\textbf{欧拉定理}(若$f(x_1,\cdots,x_k)$满足$f(\lambda x_1,\cdots,\lambda x_k)=\lambda^mf(x_1,\cdots,x_k)$,则$f$为$x_1,\cdots,x_k$的$m$次齐函数,两边对$\lambda$求导后令$\lambda=1$得$\sum_ix_i\frac{\partial f}{\partial x_i}=mf$),$V,U,S$均为各组元摩尔数的一次齐函数,$V=\sum n_i\left(\frac{\partial V}{\partial n_i}\right)_{T,p,n_j},U=\sum n_i\left(\frac{\partial U}{\partial n_i}\right)_{T,p,n_j},S=\sum n_i\left(\frac{\partial S}{\partial n_i}\right)_{T,p,n_j}$,其中\textbf{偏摩尔体积/内能/熵}$v_i=\left(\frac{\partial V}{\partial n_i}\right)_{T,p,n_j},u_i=\left(\frac{\partial U}{\partial n_i}\right)_{T,p,n_j},s_i=\left(\frac{\partial S}{\partial n_i}\right)_{T,p,n_j}$,代表在$T,p,n_j$不变的条件下,当增加$1$mol的$i$组元物质时,系统$V,U,S$的增量;任意广延量均为各组元摩尔数的一次齐函数\\
+对吉布斯函数,$G=\sum_in_i\left(\frac{\partial G}{\partial n_i}\right)_{T,p,n_j}=\sum_in_i\mu_i$,其中$i$组元的化学势$\mu_i=\left(\frac{\partial G}{\partial n_i}\right)_{T,p,n_j}$,微分得$dG=\left(\frac{\partial G}{\partial T}\right)_{p,n_i}+\left(\frac{\partial G}{\partial p}\right)_{T,n_i}dp+\sum_i\left(\frac{\partial G}{\partial n_i}\right)_{T,p,n_j}dn_i=-SdT+Vdp+\sum_i\mu_idn_i$;\textbf{多元系的热力学基本微分方程}:$dU=TdS-pdV+\sum_i\mu_idn_i\Rightarrow\mu_i=\left(\frac{\partial U}{\partial n_i}\right)_{S,V,n_j}=\left(\frac{\partial H}{\partial n_i}\right)_{S,p,n_j}=\left(\frac{\partial F}{\partial n_i}\right)_{T,V,n_j}$;又$G=\sum_in_i\mu_i\Rightarrow dG=\sum_in_id\mu_i+\sum_i\mu_idn_i\Rightarrow\textbf{吉布斯关系}:SdT-Vdp+\sum_in_id\mu_i=0$,意味着在$k+2$个强度量$T,p,\mu_i$间存在一约束,仅有$k+1$个是独立的\\
+对多元复相系,每相各有热力学函数和基本方程:$dU^{\alpha}=T^{\alpha}dS^{\alpha}-p^{\alpha}dV^{\alpha}+\sum_i\mu_i^{\alpha}dn_i^{\alpha},H^{\alpha}=U^{\alpha}+p^{\alpha}V^{\alpha},F^{\alpha}=U^{\alpha}-T^{\alpha}S^{\alpha},G^{\alpha}=U^{\alpha}-T^{\alpha}S^{\alpha}+p^{\alpha}V^{\alpha};V=\sum_{\alpha}V^{\alpha},U=\sum_{\alpha}U^{\alpha},S=\sum_{\alpha}S^{\alpha},n_i=\sum_{\alpha}n_i^{\alpha}$;仅当各相等压,总焓才有意义,$H=\sum{\alpha}H^{\alpha}$;仅当各相等温,总自由能才有意义,$F=\sum_{\alpha}F^{\alpha}$;仅当各相等温等压,总吉布斯函数才有意义,$G=\sum{\alpha}G^{\alpha}$\\
+\textbf{4.2 多元系的复相平衡条件}
+设两相$\alpha,\beta$均含$k$个组元,组元间无化学变化,两相等温等压且定温定压,设各组元摩尔数发生虚变动,总摩尔数不变要求$\delta n_i^{\alpha}+\delta n_i^{\beta}=0$,总吉布斯函数变化$\delta G^{\alpha}+\delta G^{\beta}=\sum_i(\mu_i^{\alpha}-\mu_i^{\beta})\delta n_i^{\alpha}$,平衡态吉布斯函数最小,$\delta G=0\Rightarrow\mu_i^{\alpha}=\mu_i^{\beta}$,意味着整个系统平衡时,两相中各组元化学势均相等,否则朝$(\mu_i^{\alpha}-\mu_i^{\beta})<0$方向变化\\
+\textbf{4.3 吉布斯相律}\quad
+有$\varphi$相,$k$个组元的多元复相系,系统是否平衡取决于强度量,改变一/多相总物质量而保持$T^{\alpha},p^{\alpha}$及各相中各组员相对比例不变,则系统平衡不受破坏;存在约束:总物质量$n^{\alpha}=\sum_{i=1}^kn_i^{\alpha}\Rightarrow$总摩尔分数$\sum_{i=1}^kx_i^{\alpha}=1$,$k$个$x_i^{\alpha}$中$k-1$个独立,加上$p,T,n^{\alpha}$共$k+2$个变量,$\varphi$个相共$\varphi(k+1)$个强度变量,加上$(k+2)(\varphi-1)$个平衡约束条件:$T^1=\cdots=T^{\varphi},p^1=\cdots=p^{\varphi},\mu_i^1=\cdots=\mu^{\varphi}\Rightarrow$\textbf{吉布斯相律}:多元复相系的自由度$f=(k+1)\varphi-(k+2)(\varphi-1)=k+2-\varphi$\\
+\textbf{4.4 二元系相图举例}
+二元系:$k=2,\varphi=1,f=3(T,p,x)$ 其中$x=x_2=\frac{n_2}{n_1+n_2}=\frac{100m_2}{m_1+m_2}\%,x_1=1-x$;\textbf{二元系的相图}:通常在固定压强下以$T$或$x$为变量,或在固定温度下,以$p$和$x$为变量;\textbf{无限固溶体}:如金银合金,液固共存二元系,$k=2,\varphi=2,f=2(T,p)$(当温度下降,凝结在一温度范围内完成而非在一凝结点完成),$B$组元的质量:$(m^{\alpha}+m^{\beta})x=m^{\alpha}x^{\alpha}+m^{\beta}x^{\beta}\Rightarrow\frac{m^{\alpha}}{m^{\beta}}=\frac{x^{\beta}-x}{x-x^{\alpha}}=\frac{\overline{ON}}{\overline{MO}}$(\textbf{杠杆法则});\textbf{固相完全不相容}:如镉-铋合金,液相/纯$A$两相共存,\textbf{杠杆法则}$\frac{m^{\alpha}}{m^A}=\frac{\overline{MO}}{\overline{ON}}$\\
+\textbf{4.5 化学平衡条件}\quad
+单相化学反应一般表达式:$\sum_i\nu_iA_i=0,dn_i=\nu_idn$,当$dn>0$,反应正向进行;等温等压反应焓变$\Delta H=\sum_i\nu_ih_i$,\textbf{定压反应热}:$Q_p=\Delta H$;\textbf{赫斯定律}若一反应可经不同的两中间过程达到,两过程的反应热相等\\
+\textbf{化学平衡条件}:等温等压下$i$组元物质量虚变动$\delta n_i$,$\delta G=\sum_i\mu_i\delta n_i=\sum_i\mu_i\nu_i\delta n=0\Rightarrow\sum_i\mu_i\nu_i=0$,若平衡条件不满足,则反应朝$\delta\sum_i\mu_i\nu_i$方向进行\\
+\textbf{4.6 混合理性气体的性质}
+\textbf{道尔顿定律}:含$k$个组元的混合气体的压强等于各组元分压之和,$p=\sum_ip_i=\sum_in_i\frac{RT}{V},pV=(n_1+n_2+\cdots+n_k)RT(\textbf{混合气体的物态方程})\Rightarrow\frac{p_i}{p}=\frac{n_i}{n_i+\cdots+n_k}=x_i$\\
+一能够通过半透膜的组分,平衡时半透膜两边温度/化学势/分压相等,$\mu_i=\mu'(T,p_i)$\\
+\textbf{混合理想气体的性质}:$G=\sum_i\mu_in_i,\mu_i=RT(\varphi_i+\ln p_i),\varphi_i=\frac{h_{i0}}{RT}-\int\frac{dT}{RT^2}\int c_{pi}dT-\frac{S_{i0}}{R}$;$V=\frac{\partial G}{\partial p}=\frac{\sum_in_iRT}{p}$(混合理想气体的物态方程);$S=-\frac{\partial G}{\partial T}=\sum_in_i\left[\int\frac{c_{pi}}{T}dT-R\ln(x_ip)+s_{i0}\right]=\sum_in_i\left[\int\frac{c_{pi}}{T}dT-R\ln p+s_{i0}\right]+C,C=-R\sum_in_i\ln x_i$;$H=\sum_in_i(\int c_{pi}dt+h_{i0})$;$U=\sum_in_i(\int c_{Vi}dt+U_{i0})$\\
+%\textbf{亨利定律}\\
+%\textbf{吉布斯佯谬}\\
+\textbf{4.7 理想气体的化学平衡}
+\textbf{平衡条件}:$\sum_i\mu_i\nu_i=RT\sum_i\nu_i[\varphi_i+\ln(x_ip)]=0$,由此定义定压平衡常数$K_p$满足$\ln K_p=-\sum_i\nu_i\varphi_i\Rightarrow(\text{平衡条件})K_p=\prod_ip_i^{\nu_i}\Rightarrow p^{-\sum_i\nu_i}K_p=\prod_ix_i^{\nu_i}$;当平衡条件未满足,反应正向进行条件$\prod p_i^{\nu_i}<K_p$;$\ln K_p=-\frac{\sum_i\nu_ih_{i0}}{RT}+\sum_i\nu_i\int\frac{dT}{T^2}\int c_{pi}dT+\frac{\sum_i\nu_is_{i0}}{R}=(\textbf{热容量近似为常量})-\frac{A}{T}+C\ln T+B,A=\frac{\sum_i\nu_ih_{i0}}{R},B=\sum_i\frac{\nu_i(s_{i0}-c_{pi})}{R},C=\frac{\sum_i\nu_ic_{pi}}{R}$\\
+\textbf{4.8 热力学第三定律}
+\textbf{能斯特定理}:凝聚系的熵在等温过程中的改变随绝对温度趋于$0$,$\lim_{T\rightarrow0}(\Delta S)_T=0$;设$\lim_{T\rightarrow0}S=0$,则可计算绝对熵;\textbf{热力学第三定律(绝对零度不能达到原理)}:不可能通过有限的步骤使一个物体冷却到绝对温度的零度\\
+\textbf{汤姆逊-伯特洛原理}:在等温条件下,化学反应朝$\Delta H<0$方向进行;当$T\rightarrow0,\Delta H=\Delta G,{\Delta H-\Delta G}/{T}=\Delta S,\because\lim_{T\rightarrow0}\Delta S=0\therefore\left(\frac{\partial}{\partial T}\Delta H\right)_0=\left(\frac{\partial}{\partial T}\Delta G\right)_0=0$,$\Delta G$和$\Delta H$公切线平行于$T$轴\\
+一些推论:$\lim_{T\rightarrow0}\left(\frac{\partial V}{\partial T}\right)_p=-\lim_{T\rightarrow0}\left(\frac{\partial S}{\partial p}\right)=0,\lim_{T\rightarrow0}\alpha=0,\lim_{T\rightarrow0}\left(\frac{\partial p}{\partial T}\right)_V=\lim_{T\rightarrow0}\left(\frac{\partial S}{\partial V}\right)_T=0,\lim_{T\rightarrow0}\beta=0$;$S(T,V)=\int_0^T\frac{C_V}{T}dT$,$\because$熵有限,$\therefore\lim_{T\rightarrow0}C_V=0,S(T,p)=\int_0^T\frac{C_p}{T}dT$,$\because$熵有限,$\therefore\lim_{T\rightarrow0}C_p=0$
+\end{multicols}
+
+\begin{multicols}{2}
+\noindent\textbf{Chap6 近独立粒子的最概然分布}
+\textbf{6.1 粒子运动状态的经典描述}\\
+自由度为$r$的粒子确定运动状态需$r$个广义坐标和与之共轭的$r$个广义动量$(q_1,\cdots,q_r;p_1,\cdots,p_r)$,能量$\varepsilon=\varepsilon(\bm{q};\bm{p})$;$\bm{\mu}$\textbf{空间}:以上述$2r$个变量为直角坐标的$2r$维空间;\textbf{力学运动状态的代表点}:$\mu$空间中表示运动状态的一点\\
+\textbf{自由粒子}:不受外力而自由运动的粒子,自由度$3$,动量$p_x=m\dot{x},\cdots$,能量$\varepsilon=\frac{1}{2m}(p_x^2+p_y^2+p_z^2)$,$\mu$空间中轨迹为一直线;\\
+一维\textbf{线性谐振子}$F=-Ax=m\ddot{x}\Rightarrow\omega=\sqrt{A/m}$,自由度$1$,$(x,p_x=m\dot{x})$,能量$\varepsilon=\frac{p^2}{2m}+\frac{1}{2}m\omega^2x^2\Rightarrow\frac{p^2}{2m\varepsilon}+\frac{x^2}{2\varepsilon/(m\omega^2)}=1$,$\mu$空间中轨迹为一椭圆
+\textbf{转子}:直角坐标系下,$\varepsilon=\frac{1}{2}m(\dot{x}^2+\dot{y}^2+\dot{z}^2)$,球坐标下,$\varepsilon=\frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2+r^2\sin^2\theta\dot{\varphi}^2)=\frac{1}{2I}(p_{\theta}^2+\frac{1}{\sin^2}p_{\varphi}^2)$,动量$p_{\theta}=mr^2\dot{\theta},p_{\varphi}=mr^2\sin^2\theta\dot{\varphi}$,无外力时选$\theta=\frac{\pi}{2},p_{\theta}=0,p_{\varphi}=mr^2\dot{\varphi}=M,\varepsilon=\frac{M^2}{2I}$\\
+\textbf{6.2 粒子运动状态的量子描述}
+\textbf{线性谐振子}:能级$\varepsilon_n=\hbar\omega(n+\frac{1}{2}),n=0,1,\cdots$等间距,无简并
+\textbf{转子}:角动量$M^2=l(l+1)\hbar^2,l=0,1,\cdots$,在本征方向投影$M_z=m\hbar,m=0,\cdots,\pm l$,$\varepsilon=\frac{l(l+1)\hbar^2}{2I}$,简并度$2l+1$
+\textbf{自旋角动量}:$S^2=s(s+1)\hbar^2$,自旋量子数$s$为整数/半整数,在本征方向投影$S_z=m_s\hbar,m_s=s,\cdots,-s$\\
+\textbf{自由粒子}:无限深方势阱中,$L=|n_x|\lambda,n_x=0,\pm1,\cdots,k_x=\frac{2\pi}{\lambda}=\frac{2\pi n_x}{L},p_x=\frac{2\pi\hbar}{L}n_x,\varepsilon=\frac{2\pi^2\hbar^2}{m}\frac{n_x^2}{L^2},n_x=0,\pm1,\cdots$,三维空间中$p_i=\frac{2\pi\hbar}{L}n_i,i=x,y,z,\varepsilon_n=\sum_i\frac{2\pi^2\hbar^2}{m}\frac{n_i^2}{L^2}=\frac{2\pi^2\hbar^2}{m}\frac{n^2}{L^2}$,简并复杂;微观状态数$dn_i=\frac{L}{2\pi\hbar}dp_i,dn_xdn_ydn_z=\frac{V}{h^3}dp_xdp_ydp_z$;或视每个微观状态为$\mu$空间中一相格,其体积为$\Delta p_1\cdots\Delta p_r\Delta q_1\cdots\Delta q_r=h^r$,三维粒子的$\mu$空间体积元中微观状态数$\frac{1}{h^r}dq_xdq_ydq_zdxdydz=\frac{1}{h^3}p^2\sin\theta d\theta d\varphi dpdxdydz$,三维体积$V$中$\bm{p}\rightarrow\bm{p}+d\bm{p}$中微观状态数$d\Omega=\frac{V}{h^3}dp_xdp_ydp_z=\frac{V}{h^3}p^2dp\int_0^{\pi}\sin\theta d\theta\int_0^{2\pi}d\varphi=\frac{4\pi V}{h^3}p^2dp=\frac{2\pi V}{h^3}(2m)^{3/2}\varepsilon^{1/2}d\varepsilon=D(\varepsilon)d\varepsilon$,其中$D(\varepsilon)$--态密度;对电子$s=1/2$,状态数乘$2$\\
+\textbf{6.3 系统微观运动状态的描述}
+\textbf{全同粒子}组成的系统遵从全同性原理,即粒子不可分辨;全同粒子特点:相同质量/自旋/电荷等\\
+\textbf{经典力学系统描述方式}:粒子可分辨;需确定每个粒子个体状态,粒子自由度$r$,共$N$个粒子,每个粒子需$2r$个变量:$(q_1,\cdots,q_r;p_1,\cdots,p_r)$,描述整个系统需$2Nr$个变量;交换任意两个粒子的运动状态,系统微观状态改变,力学运动状态也改变;\textbf{量子力学描述方式}:\textbf{微观粒子全同性原理}:全同粒子是不可分辨的,在含有多个全同粒子的系统中,将任何两个全同粒子加以对换,不改变整个系统的微观运动状态;需确定每个个体量子态上的粒子数\\
+\textbf{费米子}:自旋为半整数,遵从全同性原理和泡利不相容原理(任一量子态最多只能被一个粒子占据),如电子/$\mu$子/质子/中子;\textbf{玻色子}:自旋量子数为整数,遵从全同性原理,不受泡利不相容原理限制(任一量子态填充的粒子数无限制);玻色子构成的/偶数个费米子构成的复合粒子为玻色子,奇数个费米子构成的复合粒子为玻色子\\
+\textbf{玻尔兹曼系统}:建立在统计物理发展早期(远早于量子力学),全同近独立粒子可分辨,处于同一量子态上的粒子数不受限制;\textbf{玻色系统}:粒子不可分辨,每一个体量子态容纳粒子数不受限制;\textbf{费米系统}:粒子不可分辨,每一个体量子态至多一粒子数\\
+\textbf{6.4 等概率原理}:对于处在平衡状态的孤立系统,系统各个可能的微观状态出现的几率是相等的\\
+\textbf{6.5 分布和微观状态}
+设粒子能级$\varphi_1,\cdots,\varphi_l,\cdots$,简并度$\omega_1,\cdots,\omega_l,\cdots$,分布:粒子数$\{a_1,\cdots,a_l,\cdots\}$, $\sum_la_l=N,\sum_la_l\varphi_l=E$(\textbf{分布和微观状态的区别}:分布$\{a_l\}$仅确定各能级$\varepsilon_l$上的粒子数$a_l$,对玻色/费米系统,确定系统的微观状态要求确定各个体量子态上的粒子数,除给定分布,还须确定各能级$a_l$个粒子占据$\omega_l$个量子态的方式;对玻尔兹曼系统,确定系统的微观状态需确定各粒子的状态,除给定分布,还须确定处在能级$\varepsilon_l$上的是哪$a_l$个粒子及其占据$\omega_l$个状态的方式)\\
+\textbf{玻尔兹曼系统的微观状态数}:$\Omega_{M.B}=\frac{N!}{\prod_la_l!}\prod_l\omega_l^{a_l}$;对\textbf{玻色系统}:$\Omega_{B.E}=\prod_lW_l=\prod_l\frac{(\omega_l+a_l-1)!}{(\omega_l-1)!a_l!}$($W_l$--各能级的占据方式数);\textbf{费米系统}:$\Omega_{F.D}=\prod_lW_l=\prod_l\frac{\omega_l!}{(\omega_l-a_l)!a_l!}$($W_l=C_{\omega_l}^{a_l}$)\\
+当$a_l\ll\omega_l$,泡利不相容和能级简并对占据影响不大,$\Omega_{B.E}=\prod_l\frac{(\omega_l+a_l-1)(\omega_l+a_l-2)\cdots\omega_l}{a_l!}\approx\prod_l\frac{\omega_l^{a_l}}{a_l!}$;$\Omega_{F.D}=\prod_l\frac{\omega_l(\omega_l-1)\cdots(\omega_l-a_l+1)}{a_l!}\approx\prod_l\frac{\omega_l^{a_l}}{a_l!}$;$\Omega_{B.E}\sim\Omega_{F.D}\sim\frac{\Omega_{M.B}}{N!}$\\
+\textbf{经典统计中的分布和微观状态数}用$\bm{q},\bm{p}$描述状态,将$\mu$空间分为一系列相格,体积元$\Delta\omega_1,\cdots,\Delta\omega_l(=\Delta q_{1l}\cdots\Delta q_{rl}\Delta p_{1l}\cdots\Delta p_{rl})$,简并度$\frac{\Delta\omega_1}{h_0^r},\cdots,\frac{\Delta\omega_l}{h_0^r}$,能量$\varepsilon_1,\cdots,\varepsilon_l,\cdots$,粒子数$a_1,\cdots,a_l,\cdots$,微观状态数$\Omega_{cl}=\frac{N!}{\prod_la_l!}\prod_l\left(\frac{\Delta\omega_l}{h_0^r}\right)^{a_l}$\\
+\textbf{6.6 玻尔兹曼分布}
+由等概率原理,微观状态数最多的分布出现概率最大,称\textbf{最概然分布};\textbf{玻尔兹曼分布}:玻尔兹曼系统的最概然分布\\
+\textbf{斯特林公式}:$\ln m!=m(\ln m-1)$,证明:当$m\gg1$,$\ln m!=\ln1+\cdots+\ln m\approx\int\ln xdx\approx m(\ln m-1)$\\
+玻尔兹曼分布取对数,$\ln\Omega=\ln N!-\sum_l\ln a_l!+\sum_l a_l\ln\omega_l\approx(a_l\gg1)N(\ln N-1)-\sum_l a_l(\ln a_l-1)+\sum_l a_l\ln\omega_l=N\ln N-\sum_la_l\ln a_l+\sum_la_l\ln\omega_l$,当$a_l$变化$\delta a_l$,$\ln\Omega$变化$\delta\ln\Omega=-\sum_la_l\frac{1}{a_l}\delta a_l-\sum_l\ln a_l\delta a_l+\sum_l\ln\omega_l\delta a_l$,$\because\delta N=\sum_l\delta a_l=0,\delta E=\sum_l\varepsilon_l\delta a_l=0$,$\therefore\delta\ln\Omega=\sum_l\ln\left(\frac{a_l}{\omega_l}\right)\delta a_l$,设拉格朗日未定乘子$\alpha,\beta$,$\delta\ln\Omega-\alpha\delta N-\beta\delta E=-\sum_l\left(\ln\frac{a_l}{\omega_l}+\alpha+\beta\varepsilon_l\right)\delta\alpha_l=0\Rightarrow\ln\frac{a_l}{\omega}+\alpha+\beta\varepsilon_l=0\Rightarrow a_l=\omega_le^{-\alpha-\beta\varepsilon_l}$(\textbf{玻尔兹曼分布}),总粒子数$N=\sum_l\omega_le^{-\alpha-\beta\varepsilon_l}$,总能量$E=\sum_l\varepsilon_l\omega_le^{-\alpha-\beta\varepsilon_l}$,能量为$\varepsilon_s$的量子态$s$上平均粒子数$f_s=e^{-\alpha-\beta\varepsilon_s}$;$\delta^2\ln\Omega=-\delta\sum_l\ln\left(\frac{a_l}{\omega_l}\right)\delta a_l=-\sum_l\frac{(\delta a_l)^2}{a_l}<0$,玻尔兹曼分布下,微观状态数极大;原则上,给定$N,E,V,T$等条件,满足$\sum_la_l=N,\sum_l\varepsilon_la_l=E$的分布均可实现,但$a_l$的微小偏离将导致微观状态数骤降;推导利用斯特林公式,而实际不一定满足$a_l\gg1$,但推导结果正确;讨论仅针对单元系,可推广到多元系\\
+\textbf{6.7 玻色分布和费米分布}
+\textbf{玻色分布}:$\ln\Omega_{B.E.}=\sum[\ln(\omega_l+a_l-1)!-\ln a_l!-\ln(\omega_l-1)!]\approx(a_l\gg1,\omega_l\gg1)\sum_l(\omega_l+a_l)[\ln(\omega_l+a_l)-1]-a_l[\ln a_l-1]-\omega_l[\ln\omega_l-1]\approx\sum_l(\omega_l+a_l)\ln(\omega_l+a_l)-a_l\ln a_l-\omega_l\ln\omega_l$,为使$\Omega$极大,$\delta\ln\Omega=\sum_l[\ln(\omega_l+a_l)-\ln a_l]\delta a_l=0\Rightarrow\sum_l[\ln(\omega_l+a_l)-\ln a_l-\alpha-\beta\varepsilon_l]\delta a_l=0\Rightarrow a_l=\frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}-1}$,总粒子数$\sum_l\frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}-1}=N$,总能量$\sum_l\frac{\varepsilon_l\omega_l}{e^{\alpha+\beta\varepsilon_l}-1}=E$\\
+\textbf{费米分布}:$\ln\Omega=\sum[\ln\omega_l!-\ln a_l!-\ln(\omega_l-a_l)!]\approx(\omega_l\gg1,a_l\gg1)\sum_l[\omega_l\ln\omega_l-a_l\ln a_l-(\omega_l-a_l)\ln(\omega_l-a_l)]$,同理得$a_l=\frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}+1}$,$\alpha,\beta$满足$\sum_l\frac{\omega_l}{e^{\alpha+\beta\varepsilon_l}+1},\sum_l\frac{\varepsilon_l\omega_l}{e^{\alpha+\beta\varepsilon_l}+1}=E$\\
+\textbf{6.7 三种分布的关系}:当$e^{\alpha}\gg1$即$\frac{a_l}{\omega_l}\ll1$,玻色和费米分布均趋于玻尔兹曼分布,$\Omega_{B.E}\approx\Omega_{F.D}\approx\frac{\Omega_{M.B}}{N!}$,因子$N!$对极值(分布)无影响;定域系统中不可分辨的粒子(如晶体中平衡位置附近做微振动的粒子)可用区域分辨,故可用玻尔兹曼分布
+\end{multicols}
+\end{document}

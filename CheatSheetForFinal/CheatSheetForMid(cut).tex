@@ -1,0 +1,86 @@
+% !TEX program = pdflatex
+% Thermodynamics&StatisticalMechanicsCheatSheetforMid(cut)
+\documentclass[10pt,a4paper]{article}
+\usepackage{geometry}
+\geometry{left=.1cm,right=.1cm,top=.1cm,bottom=.1cm}
+\usepackage{multicol}
+\setlength{\columnseprule}{1pt} 
+%\def\columnseprulecolor{\color{black}}
+\usepackage[UTF8,linespread=.1]{ctex}
+\usepackage{amsmath,amssymb,mathrsfs,bm,graphicx}
+\usepackage{tipa}
+\begin{document}
+\tiny
+\begin{multicols}{2}
+\noindent\textbf{1.2}
+\textbf{热平衡定律(热$0$律)}:若$A$,$B$各与处于同一状态$C$达热平衡,若$A$,$B$热接触,两者亦热平衡\\
+\textbf{1.3}
+\textbf{定压膨胀系数}:$\alpha=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p$;\textbf{定容压力系数}:$\beta=\frac{1}{p}\left(\frac{\partial p}{\partial T}\right)_V$;\textbf{等温压缩系数}:$\kappa_T=-\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_T$\\
+$\left(\frac{\partial y}{\partial x}\right)_z\left(\frac{\partial x}{\partial z}\right)_y\left(\frac{\partial z}{\partial y}\right)_x=-1$;$\left(\frac{\partial y}{\partial x}\right)_z\left(\frac{\partial x}{\partial y}\right)_z=1$;$\left(\frac{\partial y}{\partial x}\right)_z=\left(\frac{\partial y}{\partial w}\right)_z\left(\frac{\partial w}{\partial x}\right)_z$\\
+\textbf{玻意耳定律}:当$T,n$,$pV=C$;
+\textbf{阿伏伽德罗定律}:相同$T$,$p$下任何气体$V_m$均相同,$V_{m0}=22.4L/$mol($1$atm,$273$K)\\
+\textbf{理想气体物态方程}:$pV=nRT$,($R=8.3145\text{J}\cdot\text{mol}^{-1}\cdot\text{K}^{-1}$);
+\textbf{非理想气体状态方程}:\textbf{范德瓦尔斯方程}:$(p+\frac{an^2}{V^2})(V-nb)=nRT$;
+\textbf{昂尼斯方程}:$p=\frac{nRT}{V}\left[1+\frac{n}{V}B(T)+\left(\frac{n}{V}\right)^2C(T)+\cdots\right]$,($B,C$--第$2,3$位力系数)\\
+\textbf{1.4}
+\textbf{体积功}:$dW=-pdV$,$W=-\int_{V_1}^{V_2}pdV$;
+\textbf{功的一般表达式}:$dW=\sum_{i=1}Y_idy_i$($Y_i$--广义力,$y_i$--广义坐标)\\
+\textbf{1.5 热力学第一定律}:自然界一切物质都具有能量,能量有各种不同的形式,可以从一种形式转化为另一种形式,从一个物体传递到另一个物体,在传递和转化中能量的数量不变;$\Delta U=W+Q$或$dU=\text{\textcrd}W+\text{\textcrd}Q$\\
+\textbf{1.6}
+\textbf{等容热容量}:$C_V=\lim_{\Delta T\rightarrow0}\left(\frac{\Delta Q}{\Delta T}\right)_V=\left(\frac{\partial U}{\partial T}\right)_V$;
+\textbf{等压热容量}:$C_p=\lim_{\Delta T\rightarrow0}\left(\frac{\Delta Q}{\Delta T}\right)_p$\\
+\textbf{焓}:$H=U+pV$;$C_p=\left(\frac{\partial H}{\partial T}\right)_p$\quad
+对理想气体,$C_p-C_V=nR$,$C_V=\frac{nR}{\gamma-1}$,(\textbf{热容比}$\gamma=\frac{C_p}{C_V}$)\\
+\textbf{1.8 理想气体的绝热过程}:$pV^{\gamma}=C_1,TV^{\gamma-1}=C_2,p^{\gamma-1}T^{-\gamma}=C_3$\\
+\textbf{1.10 热力学第二定律}
+\textbf{开尔文表述}:不可能从单一热源吸热使之完全变为有用功而不引起其他变化\\
+\textbf{克劳修斯表述}:不可能把能量从低温物体传到高温物体而不引起其他变化\\
+\textbf{1.11 卡诺定理}:所有工作在一定温度间的热机,以可逆热机效率最高,$\eta=1-\frac{Q_2}{Q_1}\leq1-\frac{T_2}{T_1}$(对可逆热机$=$,不可逆热机$<$)\\
+\textbf{1.14}
+\textbf{熵}变:$S_B-S_A=\int_A^B\frac{dQ}{T}$(沿可逆过程积分,不可逆过程的熵变可用相同初末态的可逆过程计算)\\
+\textbf{1.16}
+\textbf{熵增加原理}:系统经绝热过程从一状态到另一状态,其熵永不减少,若过程可逆,则熵保持不变,若不可逆,则熵增;\textbf{推论}:孤立系统内部任何自发过程总朝着熵增方向进行,当熵达最大,系统平衡\quad\quad
+\textbf{1.18}
+\textbf{自由能}:$F=U-TS$;\textbf{最大功原理}:等温过程中,系统对外做功不大于其自由能的减少,$-W\leq F_A-F_B$;\textbf{自由能判据}:等温等容条件下,$F$永不增加,不可逆反应总朝$F\downarrow$的方向进行;\quad
+\textbf{吉布斯函数}$:G=F+pV=U-TS+pV$;\textbf{吉布斯函数判据}:等温等压过程中,$G$永不增加,不可逆过程总朝$G\downarrow$的方向进行\\
+\textbf{2.1}
+\textbf{热力学基本微分方程}:$dU=TdS-pdV,H=TdS+Vdp,dF=-SdT-pdV,dG=-SdT+Vdp$\\
+\textbf{麦克斯韦关系}:$\left(\frac{\partial U}{\partial S}\right)_V=T,\left(\frac{\partial U}{\partial V}\right)_S=-p\Rightarrow\left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial p}{\partial S}\right)_V$\\
+$\left(\frac{\partial H}{\partial S}\right)_p=T,\left(\frac{\partial H}{\partial p}\right)_S=V\Rightarrow\left(\frac{\partial T}{\partial p}\right)_S=\left(\frac{\partial V}{\partial S}\right)_p$;\quad
+$\left(\frac{\partial F}{\partial T}\right)_V=-S,\left(\frac{\partial F}{\partial V}\right)_T=-p\Rightarrow\left(\frac{\partial S}{\partial V}\right)_T=\left(\frac{\partial p}{\partial T}\right)_V$;\quad
+$\left(\frac{\partial G}{\partial T}\right)_p=-S,\left(\frac{\partial G}{\partial p}\right)_T=V\Rightarrow\left(\frac{\partial S}{\partial p}\right)_T=-\left(\frac{\partial V}{\partial T}\right)_p$\\
+\textbf{2.2}
+\textbf{内能方程}:$dU=T\left(\frac{\partial S}{\partial T}\right)_VdT+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]dV$;$C_V=T\left(\frac{\partial S}{\partial T}\right)_V,\left(\frac{\partial U}{\partial V}\right)_T=T\left(\frac{\partial p}{\partial T}\right)_V-p$\\
+\textbf{焓方程}:$dH=T\left(\frac{\partial S}{\partial T}\right)_pdT+\left[V-T\left(\frac{\partial V}{\partial T}\right)_p\right]dp\Rightarrow C_p=T\left(\frac{\partial S}{\partial T}\right)_p,\left(\frac{\partial H}{\partial p}\right)_T=V-T\left(\frac{\partial V}{\partial T}\right)_p$\\
+\textbf{定压与定容热容量之差}:$C_p-C_V=T\left(\frac{\partial S}{\partial V}\right)_T\left(\frac{\partial V}{\partial T}\right)_p=T\left(\frac{\partial p}{\partial T}\right)_V\left(\frac{\partial V}{\partial T}\right)_p=TVp\alpha\beta=\frac{VT\alpha^2}{\kappa_T}$\\
+\textbf{2.3}
+\textbf{节流过程}:气体由高压流至低压并达定常状态,为\textbf{等焓过程};
+\textbf{焦汤系数}:$\mu=\left(\frac{\partial T}{\partial p}\right)_H=\frac{1}{C_p}\left[T\left(\frac{\partial V}{\partial T}\right)_p-V\right]=\frac{V}{C_p}(T\alpha-1)$;
+\textbf{绝热膨胀}:$\mu_S=\left(\frac{\partial T}{\partial p}\right)_S=\frac{T}{C_p}\left(\frac{\partial V}{\partial T}\right)_p=\frac{VT\alpha}{C_p}$\\
+\textbf{2.4}
+$dU=C_VdT+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]dV\Rightarrow U=\int\left\{C_VdT+\left[T\left(\frac{\partial p}{\partial T}\right)_V-p\right]dV\right\}+U_0$\\
+$dS=\frac{C_V}{T}dT+\left(\frac{\partial p}{\partial T}\right)_VdV\Rightarrow S=\int\left[\frac{C_V}{T}dT+\left(\frac{\partial p}{\partial T}\right)_V\right]+S_0$\\
+$dH=C_pdT+\left[V-T\left(\frac{\partial V}{\partial T}\right)_p\right]dp\Rightarrow H=\int\left\{C_pdT+\left[V-T\left(\frac{\partial V}{\partial T}\right)_p\right]dp\right\}+H_0$\\
+$dS=\frac{C_p}{T}dT-\left(\frac{\partial V}{\partial T}\right)_pdp\Rightarrow S=\int\left[\frac{C_p}{T}dT-\left(\frac{\partial V}{\partial T}\right)_pdp\right]+S_0$\\
+计算要点:1.已知物态方程和$C_V,C_p$,可得$U,S$和$H$;2.由此得其他热力学函数;3.$C_V(T,V)=C_V(T,V_0)+T\int_{V_0}^V\left(\frac{\partial^2p}{\partial T^2}\right)_VdV,C_p(T,p)=C_p(T,p_0)-T\int_{p_0}^p\left(\frac{\partial^2V}{\partial T^2}\right)_pdp$\\
+\textbf{2.5}
+$F(T,V)$作特性函数,$S=-\left(\frac{\partial F}{\partial T}\right)_V$,$p=-\left(\frac{\partial F}{\partial V}\right)_T$,$U=F-T\left(\frac{\partial F}{\partial T}\right)_V$(\textbf{吉布斯-亥姆霍兹方程}),$H=U+pV$,$G=F+pV$\quad\quad\quad\quad
+$G(T,p)$作特性函数,$S=-\left(\frac{\partial G}{\partial T}\right)_p$,$V=\left(\frac{\partial G}{\partial p}\right)_T$,$H=G-T\left(\frac{\partial G}{\partial T}\right)_p$(\textbf{吉布斯-亥姆霍兹方程}),$F=G-pV$,$U=G-pV+TS$\\
+\textbf{2.6}
+\textbf{平衡辐射特性的热力学函数}:\textbf{辐射压力和能量密度之间的关系}:$p=u/3$,\textbf{内能}:$U=aVT^4$,\textbf{熵}:$S=\frac{4}{3}aT^3V$,\textbf{自由能}:$F=-\frac{1}{3}aVT^4$,\textbf{焓}:$H=\frac{4}{3}aVT^4$,\textbf{吉布斯函数}:$G=F+pV=0$\\
+\textbf{斯特藩-玻尔兹曼定律}:辐射通量密度$J=\sigma T^4$(斯特藩常数:$\sigma=5.67\times10^{-8}\text{W}\text{m}^{-2}\text{K}^{-4}$)\\
+\textbf{2.7 磁介质的热力学}
+$dW=\mu_0\mathcal{H}dm$,$p\rightarrow-\mu_0\mathcal{H},V\rightarrow m$\\
+\textbf{热力学基本方程}:$dU=TdS+\mu_0\mathcal{H}dm,H=U-\mu_0\mathcal{H}m,dH=TdS-\mu_0md\mathcal{H},F=U-TS,dF=-SdT+\mu_0\mathcal{H}dm,G=F-\mu_0\mathcal{H}m=U-TS-\mu_0\mathcal{H}m,dG=-SdT-\mu_0md\mathcal{H}$\quad\quad
+\textbf{麦氏关系}:$\left(\frac{\partial T}{\partial m}\right)_S=\mu_0\left(\frac{\partial\mathcal{H}}{\partial S}\right)_m,\left(\frac{\partial T}{\partial\mathcal{H}}\right)_S=-\mu_0\left(\frac{\partial m}{\partial S}\right)_{\mathcal{H}},\left(\frac{\partial S}{\partial m}\right)_T=-\mu_0\left(\frac{\partial\mathcal{H}}{\partial T}\right)_m,\left(\frac{\partial S}{\partial\mathcal{H}}\right)_T=\mu_0\left(\frac{\partial m}{\partial T}\right)_{\mathcal{H}}$\\
+\noindent\textbf{3.2 开系的热力学基本方程}:$dU=TdS-pdV+\mu dn$,$\mu=\left(\frac{\partial U}{\partial n}\right)_{S,V}$;$dG=-SdT+Vdp+\mu dn$,其中\textbf{化学势}$\mu=\left(\frac{\partial G}{\partial n}\right)_{T,p}$,$G(T,p,n)=n\mu$;$dH=TdS+Vdp+\mu dn$,$\mu=\left(\frac{\partial H}{\partial n}\right)_{S,p}$;$dF=-SdT-pdV+\mu dn$,$\mu=\left(\frac{\partial F}{\partial n}\right)_{T,V}$;\quad\quad\quad\quad
+\textbf{巨热力学势}:$J(T,V,\mu)=F-\mu n=-pV$,\textbf{巨热力学势的微分}$dJ=-SdT-pdV-nd\mu$,以$J$为特性函数,$S=-\left(\frac{\partial J}{\partial T}\right)_{V,\mu}$,$p=-\left(\frac{\partial J}{\partial V}\right)_{T,\mu}$,$n=-\left(\frac{\partial J}{\partial\mu}\right)_{T,V}$\\
+\textbf{3.3 单元系的复相平衡条件}:\textbf{热平衡条件}:$T^{\alpha}=T^{\beta}$;\textbf{力学平衡条件}:$p^{\alpha}=p^{\beta}$;\textbf{相平衡条件}:$\mu^{\alpha}=\mu^{\beta}$\quad\quad
+\textbf{3.4 单元复相系的平衡性质}
+\textbf{克拉珀龙方程}:沿相平衡曲线,$\frac{dp}{dT}=\frac{S_m^{\beta}-S_m^{\alpha}}{V_m^{\beta}-V_m^{\alpha}}=\frac{L}{T(V_m^{\beta}-V_m^{\alpha})}$,\textbf{相变潜热}:$L=T(S_m^{\beta}-S_m^{\alpha})$\\
+\noindent\textbf{4.8 热力学第三定律}
+\textbf{能斯特定理}:$\lim_{T\rightarrow0}(\Delta S)_T=0$;
+\textbf{热力学第三定律}:不可能通过有限的步骤使一个物体冷却到绝对温度的零度;
+\textbf{推论}:$\lim_{T\rightarrow0}\left(\frac{\partial V}{\partial T}\right)_p=-\lim_{T\rightarrow0}\left(\frac{\partial S}{\partial p}\right)=0,\lim_{T\rightarrow0}\left(\frac{\partial p}{\partial T}\right)_V=\lim_{T\rightarrow0}\left(\frac{\partial S}{\partial V}\right)_T=0$
+\end{multicols}
+\end{document}

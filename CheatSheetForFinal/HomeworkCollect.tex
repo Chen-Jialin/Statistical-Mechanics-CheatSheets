@@ -1,0 +1,75 @@
+% !TEX program = pdflatex
+%ElectrodynamicsCheatSheetforMid
+\documentclass[10pt,a4paper]{article}
+\usepackage{geometry}
+\geometry{left=.1cm,right=.1cm,top=.1cm,bottom=.1cm}
+\usepackage{multicol}
+\setlength{\columnseprule}{1pt}
+\usepackage[UTF8,linespread=.1]{ctex}
+\usepackage{amsmath,amssymb,mathrsfs,bm,graphicx}
+%\usepackage{tipa}
+\usepackage{mathrsfs}
+\begin{document}
+\tiny
+\begin{multicols}{2}
+\noindent\textbf{7-4}试证,对遵从玻尔兹曼分布的定域系统,熵可表为$S=-Nk\sum_sP_s\ln P_s$,式中$P_s$--粒子处在量子态$s$的概率,$P_s=e^{-\alpha-\beta\varepsilon_s}/N=e^{-\beta\varepsilon_s}/Z_1$,$\sum_s$--对粒子所有量子态求和.对满足经典极限条件的非定域系统,熵的表达式有何不同?\quad\quad
+$P_s$满足归一化条件$\sum_sP_s=1$,$\ln P_s=-\ln Z_1-\beta\varepsilon_s$,粒子平均能量:$E=\sum_sP_s\varepsilon_s$,定域系统的熵:$S=Nk(\ln Z_1-\beta\frac{\partial}{\partial\beta}\ln Z_1)=Nk(\ln Z_1+\beta\bar{\varepsilon})=Nk\sum_sP_s(\ln Z_1+\beta\varepsilon_s)=Nk\sum_sP_s\ln P_s$;对满足经典极限条件的定域系统,$S=Nk(\ln Z_1-\beta\partial\ln Z_1/\partial\beta)-k\ln N!=-Nk\sum_sP_s\ln P_s-k\ln N!=-Nk\sum_sP_s\ln P_s-Nk(\ln N-1)$\\
+\textbf{7-6}晶体含$N$个原子,当原子离开正常位置,晶体中就出现了空位和间隙原子,晶体的这种缺陷称福仑克尔缺陷,(a)假设正常位置和见习位置数都是$N$,试证由于在晶体中形成$n$个空位和见习原子而具有的熵:$S=2k\ln N!/n!(N-n)!$,(b)设原子在间隙位置和正常位置的能量差为$u$,试由自由能$F=nu-TS$为极小,证明$T$下空位和间隙原子数:$n\approx Ne^{-u/2kT}$(设$n\ll N$)\quad\quad
+(a)可能的微观状态数:$\Omega=[N!/n!(N-n)!]\cdot[N!/n!(N-n)!]$,熵增:$S=k\ln\Omega$,(b)当时,内能增加$U=nu$,自由能改变$F=nu-TS=nu-2kT[N\ln N-n\ln n-(N-n)\ln(N-n)]$,平衡态$F$极小要求$\frac{\partial F}{\partial n}=u-2kT\ln\frac{N-n}{n}=0$,因$n\ll N$,有$n\approx Ne^{-u/2kT}$\\
+\textbf{7-7}若原子脱离正常位置而占据表面上的正常位置,称肖特基缺陷,用自由能极小的条件证明$T$下$n\approx Ne^{-W/kT}$,其中$W$--原子在表面位置与正常位置的能量差\quad\quad
+可能的微观态:$\Omega=N!/n!(N-n)!$,熵增:$S=k\ln\Omega=k[N\ln N-n\ln n-(N-n)\ln(N-n)]$,内能增加$U=nW$,自由能改变$F=nW-TS=nW-kT[N\ln N-n\ln n-(N-n)\ln(N-n)]$,平衡态$F$极小要求$\partial F/\partial n=W-kT\ln(N-n/n)=0$,因$n\ll N$有$n\approx Ne^{-W/kT}$\\
+\textbf{7-8}稀薄气体由某种原子组成,原子的两个能级能量之差:$\varepsilon_2-\varepsilon_1=\hbar\omega$,跃迁辐射光子,由于气体原子的速度分布和多普勒效应,光谱仪观察到的不是单一频率的$\omega_0$的谱线,而有多普勒展宽,求展宽表达式\quad\quad
+设观测方向为$z$轴方向,原子质量$m$,初态处于能级$\varepsilon_2$,速度$\bm{v}_2$,沿$z$轴发射能量$\hbar\omega$,动量$\hbar k$的光子后跃迁至能级$\varepsilon_1$,速度变为$\bm{v}_1$,动量守恒和能量守恒,$m\bm{v}_1+\hbar\bm{k}=m\bm{v}_2$,$\varepsilon_1+mv_1^2/2+\hbar\omega=\varepsilon_2+mv_2^2/2$,式(1)平方并处以$2m$得$mv_1^2/2+\hbar^2k^2/2m+\hbar\bm{v}_1\cdot\bm{k}=\frac{1}{2}mv_2^2$,代入式(2)得$\hbar\omega_0=\hbar\omega-\hbar\bm{v}_1\cdot\bm{k}-\hbar^2k^2/2m$,或$\omega_0=\omega-v_{1z}\omega/c-\hbar\omega^2/2mc^2$,考虑$m\sim10^{-26}$kg,$\bm{v}_{1z}\sim3\times10^2$m$\cdot$s$^{-1}$,$\omega\sim10^{15}$s$^{-1}$有$1\gg v_{1z}\gg\hbar\omega/2mc^2$,右侧第三项可忽略,$\omega=\omega/(1-v_{1z}/c)\approx\omega_0(1+v_{1z}/c)$,$T$下气体原子速度$z$分量在$v_z\sim v_z+dv_z$范围内的概率$\propto e^{-mv_z^2/2kT}dv_z$,$\omega\sim\omega+d\omega$范围内概率$\propto e^{-(m/2kT)(c^2(\omega-\omega_0)^2/\omega_0^2)}c/\omega_0d\omega$,归一化得$F(\omega)=(2\pi\delta^2)^{-1/2}e^{-(\omega-\omega_0)^2/2\delta^2}$,$\delta=\omega(kT/mc^2)^{1/2}$\\
+\textbf{7-11}表面活性物质的分子在液面熵作二维自由运动,可视为二维气体,试写出二维气体中分子的速度分布和速率分布,并求平均速度$\bar{v}$,最概然速率$v_m$和方均根速率$v_s$\quad\quad
+速度分布:$(m/2\pi kT)e^{-m(v_x^2+v_y^2)/2kT}dv_xdv_y$,速率分布:$(m/kT)e^{-mv^2/2kT}vdv$,$\bar{v}=(m/kT)\int_0^{\infty}e^{-mv^2/2kT}vdv=\sqrt{\pi kT/2m}$,$\bar{v^2}=(m/kT)\\\int_0^{+\infty}e^{-mv^2/2kT}v^3dv=2kT/m$,$v_s=\sqrt{2kT/m}$,$d(e^{-mv^2/2kT}v)/dv=0\Rightarrow v_m=\sqrt{kT/m}$\\
+\textbf{7-12}根据麦克斯韦速度分布律导出两分子的相对速度$\bm{v}_r=\bm{v}_2-\bm{v}_1$和相对速率$v_r$的概率分布,并求相对速率的平均值$\bar{v}_r$\quad\quad
+分子1和分子2各自处在速度间隔$d\bm{v}_1$和$d\bm{v}_2$的概率:$dW=dW_1\cdot dW_2=(m/2\pi kT)^{3/2}e^{-mv^2/2kT}d\bm{v}_1\cdot(m/2\pi kT)^{3/2}e^{-mv^2/2kT}d\bm{v}_2$,质心速度:$\bm{v}_c=(m_1\bm{v}_1+m_2\bm{v}_2)/(m_1+m_2)$,相对速度:$\bm{v}_r=\bm{v}_2-\bm{v}_1$,当$m_1=m_2=m$,简化为$\bm{v}_c=(\bm{v}_1+\bm{v}_2)/2$,$\bm{v}_r=\bm{v}_2-\bm{v}_1$,动能:$E_k=m_1v_1^2/2+m_2v_2^2/2=m'v_c^2/2+\mu v_r^2/2$,其中$m'=m_1+m_2$,$\mu=m_1m_2/(m_1+m_2)$,当$m_1=m_2=m$,$m'=2m$,$\mu=m/2$,$dW=(m'/2\pi kT)^{3/2}e^{-m'v_c^2/2kT}d\bm{v}_c\cdot(\mu/2\pi kT)^{3/2}e^{-\mu v_r^2/2kT}d\bm{v}_r=dW_cdW_r$,相对速度的概率分布$dW_r=(\mu/2\pi kT)^{3/2}e^{-\mu v_r^2/2kT}d\bm{v}_r$,相对速率的分布:$4\pi(\mu/2\pi kT)^{3/2}e^{-\mu v_r^2/2kT}v_r^2dv_r$,相对速率的平均值:$\bar{v}_r=4\pi(\mu/2\pi kT)^{3/2}\int_0^{\infty}e^{-\mu v_r^2/2kT}v_r^3dv_r=\sqrt{8kT/\pi\mu}$\\
+\textbf{7-14}分子从器壁的小孔中射出,求在射出的分子束中,分子的平均速率/方均根速率/平均能量\quad\quad
+相当于单位时间内碰到单位面积器壁上$v\sim v+dv$范围内的分子数:$d\Gamma(v)=\pi n(m/2\pi kT)^{3/2}e^{-mv^2/2kT}v^3dv$,平均速率:$\bar{v}=(\int_0^{+\infty}vd\Gamma(v))/(\int_0^{+\infty}d\Gamma)=\sqrt{9\pi kT/8m}$,:$\bar{v^2}=(\int_0^{+\infty}v^5e^{-mv^2/2kT}dv)/(\int_0^{+\infty}v^3e^{-mv^2/2kT}dv)=4kT/m$,$v_s=\sqrt{\bar{v^2}}=\sqrt{4kT/m}$,平均动能:$m\bar{v^2}/2=2kT$\\
+\textbf{7-17}已知粒子遵经典玻尔兹曼分布,其能量表达式:$\varepsilon=(p_x^2+p_y^2+p_z^2)/2m+ax^2+bx$,求粒子的平均能量\quad\quad
+配方$\varepsilon=(p_x^2+p_y^2+p_z^2)/2m+a(x+b/2a)^2-b^2/4a$,能量均分定理:$\bar{\varepsilon}=2kT-b^2/4a$\\
+\textbf{7-23}对双原子分子,常温下$kT\gg$转动的能级间距,求转动熵\quad
+转动配分函数:$Z_1^r=(1/h^2)\int e^{-\beta(p_{\theta}^2+p_{\varphi}^2/\sin^2\theta)/2I}\\dp_{\theta}dp_{\varphi}d\theta d\varphi=2I/\beta\hbar^2$,$S^r=Nk(\ln Z_1^r-\beta\partial(\ln Z_1^r)/\partial\beta)=Nk[\ln(2I/\beta\hbar^2)+1]$\\
+\textbf{7-28}晶体中原子密度$n$,角动量量子数$1$,外场$B$下,原子磁矩可有三种不同取向,忽略磁矩间相互作用,求$T$下,磁化强度$M$,及其在高温弱场和低温强场下近似\quad\quad
+配分函数:$Z_1=e^{\beta\mu B}+1+e^{-\beta\mu B}=1+2\cosh(\beta\mu B)$,磁化强度$M=(n/\beta)\partial(\ln Z_1)/\partial B=n\mu(2\sinh\beta\mu B)/(1+2\cosh\beta\mu B)$,高温弱场下,$\beta\mu B\ll1$,$\sinh\beta\mu B\approx\beta\mu B$,$\cosh\beta\mu B\approx1$,$\bm{M}=(2/3)(n\mu^2/kT)B$,反之,$\sinh\beta\mu B\approx\cosh\beta\mu B\approx e^{\beta\mu B}/2$,$M\approx n\mu$\\
+\textbf{8-2}试证,理想费米系统的熵可表为$S_{\text{F.D.}}=-k\sum_s[f_s\ln f_s+(1-f_s)\ln(1-f_s)]$,其中$f_s$--量子态$s$上的平均粒子数,$\sum_s$--对各量子态求和,并证当$f_s\ll1$,$S_{\text{B.E.}}\approx S_{\text{F.D.}}\approx S_{\text{M.B.}}=-k\sum_s(f_s\ln f_s-f_s)$\quad\quad
+理想费米系统的熵:$S_{\text{F.D.}}=k\sum_l[\omega_l\ln\omega_l-a_l\ln a_l-(\omega_l-a_l)\ln(\omega_l-a_l)]=-k\sum_l[(\omega_l-a_l)\ln((\omega_l-a_l)/\omega_l)+a_l\ln(a_l/\omega_l)]=-k\sum_l\omega_l[(1-a_l/\omega_l)\ln(1-a_l/\omega_l)-(a_l/\omega_l)\ln(a_l/\omega_l)]$,式中$\sum_l$--对各能级求和,因$f_s=a_l/\omega_l$,$\sum_l\sim\sim_s$,$S_{\text{F.D.}}=-k\sum_s[f_s\ln f_s+(1-f_s)\ln(1-f_s)]$,当$f_s\ll1$,$\pm(1\mp f_s)\ln(1\pm f_s)\approx\pm(1\mp f_s)(\mp f_s)\approx-f_s$,故得\\
+\textbf{8-4}试证,在热力学极限下均匀二维理想玻色气体不会发生玻-爱凝聚\quad\quad
+临界温度由$\int_0^{+\infty}D(\varepsilon)d\varepsilon/(e^{\varepsilon/kT_c}-1)=n$确定,态密度:$D(\varepsilon)d\varepsilon=(2\pi L/h^2)md\varepsilon$,代入得$(2\pi L^2/h^2)m\int_0^{+\infty}d\varepsilon/(e^{\varepsilon/kT_c}-1)=n$,令$x=\varepsilon/kT_c$,$(2\pi L^2/h^2)mkT_c\int_0^{+\infty}dx/(e^x-1)=n$,展开$1/(e^x-1)=1/(e^x(1-e^{-x}))=e^{-x}(1+e^{-x}+\cdots)$,$\int_0^{\infty}dx/(e^x-1)=\sum_{n=1}^{\infty}1/n$,级数发散意味着有限温度下化学势不可能趋于$0$,故\\
+\textbf{8-5}约束在磁光陷阱中的理想原子气体,在三维谐振势场$V=m(\omega_x^2x^2+\omega_y^2y^2+\omega_z^2z^2)/2$中运动,若为玻色子,试证$T\leq T_c$下,有大量原子凝聚在基态,$T_c$满足$N=1.202(kT_c/\hbar\bar{\omega})^3$\quad\quad
+三维谐振子能量:$\varepsilon=\hbar\omega_x(n_x+1/2)+\hbar\omega_y(n_y+1/2)+\hbar\omega_z(n_z+1/2)$,$n_{x/y/z}=0,1,\cdots$,在量子态$n_x$,$n_y$,$n_z$上的粒子数:$a_{n_x,n_y,n_z}=(e^{(\varepsilon-\mu)/kT}-1)^{-1}$,化学势$\mu<\varepsilon_0=(\hbar/2)(\omega_x+\omega_y+\omega_z)$,且满足$N=\sum_sa_{n_x,n_y,n_z}$,$\mu\uparrow$随$T\downarrow$,$T_c$下,$N=\sum_{n_x,n_y,n_z}(e^{\tilde{n}_x+\tilde{n}_y+\tilde{n}_z}-1)^{-1}$,其中$\tilde{n}_i=(\hbar\omega_i/kT_c)n_i$,题设极限下化求和为积分,$N=(kT_c/\hbar\bar{\omega})\int d\tilde{n}_xd\tilde{n}_yd\tilde{n}_z/(e^{\tilde{n}_x+\tilde{n}_y+\tilde{n}_z}-1)$,将被积函数如上题展开即得\\
+\textbf{8-7}求$T$下$V$内光子气体的平均总光子数\quad\quad
+$V$内$\omega\sim\omega+d\omega$范围内光子的量子态数:$D(\omega)d\omega=(V/\pi^2c^3)\omega^2d\omega$,平均光子数:$\overline{N}(\omega,T)d\omega=D(\omega)d\omega/(e^{\hbar\omega/kT}-1)$,总光子数:$\overline{N}(T)=(V/\pi^2c^3)\int_0^{+\infty}\omega^2d\omega/(e^{\hbar\omega/kT}-1)$,设$x=\hbar\omega/kT$,$\overline{N}(T)=(V/\pi^2c^2)(kT/\hbar)^3\int_0^{+\infty}x^2dx/(e^x-1)=2.404(k^3/\pi^2c^3\hbar^3)VT^3$,$n=\overline{N}/V$,$n(1000)\approx2\times10^{16}$m$^{-3}$,$n(3)\approx5.5\times10^8$m$^{-3}$\\
+\textbf{8-8}试根据普朗克公式证明平衡辐射内能密度按波长的分布:$u(\lambda,T)d\lambda=(8\pi hc/\lambda^5)d\lambda/(e^{hc/\lambda kT}-1)$\quad\quad
+内能按圆频率的分布:$u(\lambda,T)=(\pi^2c^3)^{-1}\hbar\omega^3d\omega/(e^{\hbar\omega/kT}-1)$,由$|d\omega|=(2\pi c/\lambda^2)|d\lambda|$得\quad
+\textbf{8-14}费米能级用$\hbar$!\\
+\textbf{8-18}绝热压缩系数:$\kappa_S=-(1/V)(\partial V/\partial p)_S$,试证$0$K下,理想费米气体有$\kappa_T(0)=\kappa_S=(3/2)(1/n\mu(0))$\quad\quad
+$0$K下理想费米气体压强:$p=(2/5)n\mu(0)=(2/5)(\hbar^2/2m)(3\pi^2)^{2/3}(N/V)^{5/3}$,$(\partial p/\partial V)_T=(3/2)(\hbar^2/2m)(3\pi)^{2/3}(N/V)^{2/3}(-N/V^2)$,故得$\kappa_T=(3/2)(1/\mu(0))$,由能斯特定理,$0$K下等温线与等熵线重合,$(\partial V/\partial p)_T=(\partial V/\partial p)_S$\\
+\textbf{8-26}由$N$个自旋极化的粒子组成的理想费米气体处在径向频率$\omega_r$,轴向频率$\lambda\omega_r$的磁光陷阱内,粒子能量:$\varepsilon=(p_x^2+p_y^2+p_z^2)/2m+m\omega_r^2(x^2+y^2+\lambda^2z^2)/2$,求$0$K下化学势(以费米温度表示)和粒子的平均能量\quad\quad
+粒子能量本征值:$\omega=\hbar\omega_r(n_x+n_y+\lambda n_z)$,$n_i=0,1,\cdots$,式中能量零点取$\hbar\omega_r(1+\lambda/2)$;$\mu$满足$N=\sum_{n_x,n_y,n_z}(e^{\beta[\hbar\omega_r(n_x+n_y+\lambda n_z)-\mu]}+1)^{-1}$,令$\varepsilon_i=n_i\hbar\omega_r$,$d\varepsilon_i=\hbar\omega_r$,$N=(1/\lambda(\hbar\omega_r)^3)\int d\varepsilon_xd\varepsilon_yd\varepsilon_z/(e^{\beta(\varepsilon_x+\varepsilon_y+\varepsilon_z-\mu)}+1)$,设$\varepsilon=\varepsilon_x+\varepsilon_y+\varepsilon_z$,$N=(1/\lambda(\hbar\omega_r)^3)\\\int d\varepsilon/(e^{\beta(\varepsilon-\mu)}+1)\int d\varepsilon_x\int d\varepsilon_y$,积分面积:$\varepsilon^2/2$,$N=\int D(\varepsilon)d\varepsilon/(e^{\beta(\varepsilon-\mu)}+1)$,其中$D(\varepsilon)d\varepsilon=\varepsilon^2d\varepsilon/(2\lambda(\hbar\omega_r)^3)$,解得$\mu(0)=\hbar\omega_r(6\lambda N)^{1/3}$,$E=\int_0^{\mu(0)}D(\varepsilon)\varepsilon d\varepsilon=(3/4)N\mu(0)$,除以$N$得\\
+\textbf{9-1}试证微正则系综理论中熵可表为$S=-k\sum_s\rho_s\ln\rho_s$,其中$\rho_s=1/\Omega$--系统处在状态$s$的概率,$\Omega$--系统可能微观态数\quad\quad
+由归一化条件$\sum_s\rho_s=1$和$\Omega=1/\rho_s$得$S=k\ln\Omega=k\sum_s\rho_s\ln\Omega=$\\
+\textbf{9-2}试证正则分布中熵可表为$S=-k\sum_s\rho_s\ln\rho_s$,其中$\rho_s=(1/Z)e^{-\beta E_s}$--系统处在能量$E_s$的状态的概率\quad\quad
+由归一化条件$\sum_s\rho_s=1$和$\ln\rho_s=-(\ln Z+\beta E_s)$有$S=k(\ln Z+\beta U)=k\sum_s\rho_s(\ln Z+\beta E_s)=$\\
+\textbf{9-5}体积V内有$A$,$B$两种单原子分子混合理想气体,原子数$N_A$,$N_B$,温度$T$,用正则系综理论求物态方程/内能/熵\quad\quad
+能量经典表达式:$Z=(1/N_A!N_B!h^{3N_A}h^{3N_B})\int e^{-\beta(E_A+E_B)}d\Omega_Ad\Omega_B=(V^{N_A}/N_A!)(2\pi m_A/\beta h^2)^{3N_A/2}\cdot(V^{N_B}/N_B!)(2\pi m_B/\beta h^2)^{3N_B/2}$,配分函数:$\ln Z=\ln Z_A+\ln Z_B$,物方:$p=(N_A+N_B)kT/V$,内能:$U=(3/2)(N_A+N_B)kT$,熵:$S=N_Ak[(V/N_A)(2\pi m_AkT/h^2)^{3/2}]+N_Bk\ln[(V/N_A)(2\pi m_BkT/h^2)^{3/2}]+(5/2)(N_A+N_B)k$\\
+\textbf{9-8}被吸附在液面的分子形成二维气体,考虑分子间相互作用,试证物态方程:$pA=NkT(1+(N/N_A)\cdot(B/A))$,其中$B=-(N_A/2)\int(e^{-\phi/kT}-1)2\pi rdr$,$A$--液面面积,$\phi$--两分子相互作用势\quad\quad
+二维气体能量:$E=\sum_{i=1}^{2N}p_i^2/2m+\sum_{i<j}\phi(r_{ij})$,配分函数:$Z=(1/N!h^{2N})\int e^{-\beta E}d\bm{r}_1\cdots d\bm{r}_2d\bm{p}_1\cdots dp_N=(1/N!h^{2N})(2\pi m/\beta h^2)^NQ$,其中$Q=\int e^{-\beta\sum_{i<j}\phi(r_{ij})}d\bm{r}_1\cdots d\bm{r}_N$,设$f_{ij}=e^{-\beta\phi(r_{ij})}-1$,$e^{-\beta\sum_{i<j}\phi(r_{ij})}=\prod_{i<j}(1+f_{ij})\approx1+\sum_{i<j}f_{ij}$,$Q=A^N+(N^2/2)\int f_{12}d\bm{r}_1\cdots d\bm{r}_N=A^N[1+(N^2/2A)\int_0^{+\infty}(e^{-\beta\phi(r)}-1)2\pi rdr]=A^N(1-(N^2/N_AA)B)$,配分函数:$Z=(1/Z!)(2\pi m/\beta h^2)^NA^N(1-(N^2/N_AA)B)$,$p=(1/\beta)\partial(ln Z)/\partial A$\\
+\textbf{9-12}求长度$L$的线性原子链在高温和低温下的内能\quad\quad
+$dk_xdk_y$范围内波矢数:$(L^2/4\pi^2)dk_xdk_y$,$k\sim k+dk$内:$(L^2/2\pi)kdk$,$\omega\sim\omega+d\omega$范围内振动模式数:$D(\omega)d\omega=2(L/2\pi)(1/c_)=B_2\omega d\omega$,满足$B_2\int_0^{\omega_D}\omega d\omega=3N$,德拜频率:$\omega_D^2=6N/B_2$,内能:$U=U_0+B_2\int_0^{\omega_D}\hbar\omega^2d\omega/(e^{\hbar\omega/kT}-1)$,高温极限下,$U=U_0+3NkT$,$C_V=$,高温极限下,$U=U_0+B_2\int_0^{+\infty}=U_0+3Nk\cdot4.808(T^3/\theta_D^2)$\\
+\textbf{9-15}玻色准粒子有色散关系$\omega=Ak^2$,试证低温下$C_V\propto T^{3/2}$\quad\quad
+$V$内,$k\sim k+dk$范围内准粒子状态数:$V4\pi k^2dk/(2\pi)^3$,$\omega\sim\omega+d\omega$范围内:$B\omega^{1/2}d\omega$,式中$B=(V/4\pi^2)A^{-3/2}$,$\omega\sim\omega+d\omega$准粒子数:$N(\omega)d\omega=B\omega^{1/2}d\omega/(e^{\hbar\omega/kT}-1)$,贡献内能:$U=B\int_0^{+\infty}\hbar\omega^{3/2}d\omega/(e^{\hbar\omega/kT}-1)=B(kT/\hbar)^{5/2}\hbar\int_0^{+\infty}x^{3/2}dx/(e^x-1)$\\
+\textbf{9-20}试证在巨正则系综理论中熵可表为$S=-k\ln_n\ln_s\rho_{N,s}\ln\rho_{N,s}$,其中$\rho_{N,s}=(1/\Xi)e^{-\alpha N-\beta E_s}$--系统有$N$个粒子,处在状态$s$的概率\quad\quad
+由归一化条件$\sum_{N,s}\rho_{N,s}=1$和$\ln\rho_{N,s}=-(\ln\Xi+\alpha N+\beta E_s)$有$S=k(\ln\Xi+\alpha N+\beta U)=$\\
+\textbf{9-21}$V$内含$N$个粒子,用正则系综理论证明,小体积$v$中有$n$个粒子的概率:$P_n=(1/n!)e^{\bar{n}}(\bar{n})^n$\quad\quad
+视$v$为系统,$V-r$为粒子源和热源,$P_n=\sum_s\rho_{ns}=(1/\Xi)e^{-\alpha/n}\sum_se^{-\beta E_s}=(1/\Xi)e^{-\alpha n}Z_n$,$Z_n=\sum_se^{-\beta E_s}=(1/n!)Z_1^n$--$n$个粒子的正则配分函数,$\ln\Xi=e^{-\alpha}Z_1$,$\bar{n}=-\partial(\ln\Xi)/\partial\alpha=e^{-\alpha}Z_1=\ln\Xi$,代入得\\
+\textbf{9-23}单原子分子理想气体与固体吸附面接触达平衡,被吸附分子可在吸附面上二维运动,能量:$p^2/2m-\varepsilon_0$,$\varepsilon_0>0$,用巨正则系综理论求被吸附分子面密度\quad\quad
+视被吸附分子为系统,理想气体为热源和粒子源,巨配分函数:$\Xi=\sum_{N=0}^{\infty}\sum_se^{-\alpha N-\beta E_s}=\sum_{N=0}^{\infty}e^{-\alpha N}Z_N$,其中$Z_N=(1/N!)Z_1^N$--有$N$个分子吸附时的正则配分函数,$Z_1=(1/\hbar^2)\int e^{-\beta(p^2/2m-\varepsilon_0)}dxdydp_xdp_y=A(2\pi m/\beta h^2)e^{\beta\varepsilon_0}$--单粒子配分函数,代入得$\Xi=\exp[e^{-\alpha}A(2\pi m/\beta h^2)e^{\beta\varepsilon_0}]$,$\overline{N}=A(2\pi mkT/h^2)e^{(\varepsilon+\mu)/kT}$,代入单原子分子理想气体化学势并处以$A$得\\
+\textbf{9-25}试证玻尔兹曼分布的涨落:$\overline{(a_l-\bar{a}_l)^2}=\bar{a}_l$\quad\quad
+视能级$\varepsilon_l$上的粒子为一开系,$\overline{(a_l-\bar{a}_l)^2}=-\partial\bar{a}_l/\partial\alpha$得\\
+\textbf{9-26}试证光子气体,$\overline{(a_l-\bar{a}_l)^2}=-(1/\beta)\partial\bar{a}_l/\partial\varepsilon_l$\quad\quad
+$\Xi=\sum_{a_l}e^{-\beta\varepsilon_la_l}$,$\bar{a}_l=(1/\Xi)\sum_{a_l}a_le^{-\beta\varepsilon_la_l}=(\sum_{a_l}a_le^{-\beta\varepsilon_la_l})/(\sum_{a_l}e^{-\beta\varepsilon_la_l})$,求导即得,可代入$\bar{a}_l=1/(e^{\beta\varepsilon_l}-1)$\\
+\textbf{10-8}三维布朗颗粒在各项同性介质中运动,郎之万方程:$dp_i/dt=-\gamma p_i+F_i(t)$,$i=1,2,3$,涨落力满足$\overline{F_i(t)}=0$,$\overline{F_i(t)F_j(t')}=2m\gamma kT\delta_{ij}\delta(t-t')$,试证$t$后位移平方平均值$\overline{[\bm{x}-\bm{x}(0)]^2}=\sum_i\overline{[x_i-x_i(0)]^2}=6kTt/m\gamma$\quad\quad
+一维布朗:$\overline{[x_i-x_i(0)]^2}=2kTt/m\gamma$,即得
+\end{multicols}
+\end{document}
